@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <meta name="viewport"   content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="/maps/documentation/javascript/cgc/demos.css">
+
+    <title> Go More | Accommodation </title>
+    <link rel="icon" type="image/ico" href="logo.ico">
+
+  </head>
+
+    <style>
+    div.ex1 {
+    width: 922px;
+    height: 255px;
+    overflow: scroll;
+    margin-left: auto;
+    margin-right: auto
+
+}
+.section-follow .fa-4x{
+        margin:5px 10px;
+        float: inherit;
+    }
+    .section-search input{
+        padding: 5px;
+        font-size: 18px;
+        border: #f4f4f4 0px solid;
+      
+    }
+
+.demo-wrapper {
+  padding: 2em .5em;
+  width: 100%;
+  height:100%;
+  perspective: 3300px;
+  position: relative;
+}
+.dashboard {
+  margin: 0 auto;
+  width: 100%;
+  padding: 1em;
+  transform: translateX(200px);
+  opacity:0;
+  animation: start 1s ease-out forwards;
+}
+@keyframes start{
+  0%{
+    transform: translateX(200px);
+    opacity:0;
+  }
+  50%{
+    opacity:1;
+  }
+  100%{
+    transform: translateX(0);
+    opacity:1;
+  }
+}
+body{
+
+}
+
+#content{
+	width:100%;
+	float:left;	
+	position:relative;
+  background:#d4d9e2;
+}
+
+
+    </style>
+
+<body id="home" class="scrollspy">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+      <div class="navbar-fixed">
+          <nav class="blue">
+              <div class="container">
+                <div class="nav-wrapper">
+                        <a href="#" > <img src="Picture1.png"> </a>
+                    <a href="#" class="brand-logo" onclick="location.href='page2.html'">Go More | Accommodation</a>
+                    <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+                        <i class="material-icon">Menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#search">Find Places</a></li>
+                <li><a href="#popular">Top Rated Hotels</a></li>
+                <li><a href="#reserve">Reserve</a></li>
+                <li><a href="#contact">Contact</a></li></ul>
+                </div>
+              </div>
+          </nav>
+      </div>
+      <ul class="sidenav" id="mobile-nav">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#search">Find Hotels</a></li>
+                <li><a href="#popular">Top Rated Hotels</a></li>
+                <li><a href="#reserve">Reserve</a></li>
+                <li><a href="#contact">Contact</a></li></ul>
+                
+          
+            <img src="earlshotels-corporate-header-3.jpg" width="100%" height="500">       
+                              
+                           
+            </selection>
+</head>
+<a href="">Home > Accommodation</a>
+        <br>
+        <article>
+            <div class="privew">
+            
+            <div class="bodyy">
+                <h3 style="letter-spacing:10px;text-align:center"> Find A Hotel</h3><br>
+                <section id="search" class="section section-search teal darken-1 white-text center scrollspy">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col s12">
+                                    <h4>Enter The City To Find Nearby Hotels</h4>
+                                    <div class="input-field">
+                                        <input type="text" class="white gray-text autocomplete" id="autocomplete-input" placeholder="Colombo,Kandy,Kurunegala....">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                      <section class="section section-icon gray lighten-4 center"><div class="container">
+                        <div class="row">
+                            <div class="col s12 m4">
+                                <div class="card-panel">
+                                    <i class="material-icons large red-text">hotel</i>
+                                    <h5>TOP RATED</h5>
+                                    <p>Find Our Top Rated Hotels Around The Island</p>
+                                </div>
+                            </div>
+                            <div class="col s12 m4">
+                                 <div class="card-panel">
+                                     <i class="material-icons large red-text">search</i>
+                                     <h5>YOUR CHOICE</h5>
+                                     <p>Find Shops According To Your Budget</p>
+                                 </div>
+                             </div>
+                             <div class="col s12 m4">
+                                     <div class="card-panel">
+                                         <i class="material-icons large red-text">directions</i>
+                                         <h5>DIRECTIONS</h5>
+                                         <p>Get Directions To Your Favourite Place</p>
+                                     </div>
+                                 </div>
+                                 
+                        </div>
+                    </div></section>
+                    
+            </div></div>
+        </article>
+ 
+        <div class="map">
+            <h3 style="text-align:center">Directions For Your <span class="teal-text">Accommodation</span>
+                
+            </h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d253400.2902607633!2d79.87367625160692!3d7.079714142511706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1srestaurants!5e0!3m2!1sen!2slk!4v1539372836439" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+<br>
+
+<section id="popular" class="section section-popular scrollspy">
+<h3 style="text-align:center">Top Rated <span class="teal-text">Hotels</span>
+</h3>
+<br>
+<div class="ex1">
+        <img class="mySlides" src="05.JPG">
+        <img class="mySlides" src="04.JPG">
+        <img class="mySlides" src="01.JPG">
+        <img class="mySlides" src="02.JPG">
+        <img class="mySlides" src="03.JPG">
+        <img class="mySlides" src="06.JPG">
+        <img class="mySlides" src="07.JPG">
+        <img class="mySlides" src="08.JPG">
+        <img class="mySlides" src="10.JPG">
+        <img class="mySlides" src="11.JPG">
+        <img class="mySlides" src="12.JPG">
+
+</div>
+</section>
+<br>
+
+
+
+<div class="form">
+<form action = "hotel.php" method="POST" name="myForm">
+   <section id="reserve" class="section section-reserve scrollspy">
+    <div style="width: 100%;   border: #e21010 1px solid;">
+    </div>
+    <h3 style="text-align:center">Reserve A  <span class="teal-text">Hotel</span>
+        </h3>
+    <div style="text-align:center;size:24px">Hotel <span class="teal-text">Reservation</span>
+    <div style="display: flex; padding-bottom: 18px;width : 450px;">
+        </div><div style="padding-bottom: 18px;">Location<span style="color: red;"> *</span><br/>
+            <input type="text" placeholder="Colombo" name="data_20" style="width : 450px;" class="form-control" minlength="3" required="" oninvalid="this.setCustomValidity('Please Enter Your Current Location')" 
+            oninput="setCustomValidity('')"/>
+            <br>
+            <div class="dropdown">
+                    <input type="text" placeholder="Select A Hotel" list="listid20" name="hotel"  style="width : 450px;" class="form-control" required="" oninvalid="this.setCustomValidity('Please Select A Hotel')" 
+                    oninput="setCustomValidity('')"/>
+                    <datalist id="listid20">
+                        
+                            <option> **********YALA**********</option>
+                        <option> Mahoora Tented Safari Camp - Kumana (2800 USD) </option>
+                        <option> Chena Huts by Uga Escapes - YALA (1980 USD) </option>
+                        <br>
+                        <option > **********Hambantota**********</option>
+                        <option> Peacock Beach Hotel (160 USD) </option>
+                        <option> Shangri-La's Hambantota Golf Resort & Spa (600 USD) </option>
+                        <option> Bandagiri Village Eco Resort (200 USD) </option>
+                        <option> Jade Green Hambantota (150 USD) </option>
+                        <option> Best Life Eco Resort Mattala (60 USD)
+                            </option>
+                            <br>
+                            <option> **********Galle**********</option>
+                            <option> Amari Galle (400 USD) </option>
+                            <option> Le Grand Galle by Asia Leisure (300 USD)</option>
+                            <option> Fort Bazaar (600 USD) </option>
+                            <option> Arabella on Boossa (230 USD)</option>
+                            <option> The Fort Printers (240 USD)</option>
+                            <br>
+                            <option invalid> **********Kandy**********</option>
+                            <option> Earl's Regency (350 USD) </option>
+                        <option> Hill Crescent Kandy (220 USD)</option>
+                        <option> Airavata Luxury Boutique Resorts (180 USD) </option>
+                        <option> Kings Pavilion - Kandy (230 USD)</option>
+                        <option> Queen's Hotel (240 USD)</option>
+                        <option> Amaya Hills (300 USD) </option>
+                        <option> Serene Grand Hotel (100 USD)</option>
+                        <br>
+                        <option> **********Colombo**********</option>
+                        <option> Shangri-La Hotel Colombo (400 USD) </option>
+                        <option> Cinnamon Grand Colombo (200 USD)</option>
+                        <option> Taj Samudra - Colombo (180 USD) </option>
+                        <option> Galle Face Hotel (230 USD)</option>
+                        <option> Paradise Road Tintagel Colombo (240 USD)</option>
+                        <option> The Kingsbury Colombo (270 USD)</option>
+                        <option> Cinnamon Red Colombo (180 USD) </option>
+                        <option> Marino Beach Colombo (120 USD)</option>
+                        <option> Golden Pier City Hotel Opens in new window  (240 USD)</option>
+                        <br>
+                        <option>**********Kurunegala**********</option>
+                        <option> Kandiyan Reach Hotel (180 USD) </option>
+                        <option> Hotel Blue Sky (80 USD)</option>
+                     
+                    </datalist>
+
+            </div>
+    <div style="padding-bottom: 18px;">Name<span style="color: red;"> *</span><br/>
+    <input type="text" placeholder="Jason Marz" name="data_4" style="width : 450px;" class="form-control" minlength="6" required="" oninvalid="this.setCustomValidity('Please Enter Your Full Name')" 
+    oninput="setCustomValidity('')"/>
+    </div>
+    <div style="padding-bottom: 18px;">Email<span style="color: red;"> *</span><br/>
+        <input type="email"  name="data_5" style="width : 450px;" class="form-control" placeholder="abc@gmail.com" required="" oninvalid="this.setCustomValidity('Please Enter Your Email')" 
+        oninput="setCustomValidity('')"/>
+        </div>
+    <div style="padding-bottom: 18px;">Phone Number<span style="color: red;"> *</span><br/>
+<input type="text" placeholder="0374698754" name="data_6" style="width : 450px;" class="form-control" pattern=".{0,10}" minlength="10" maxlength="10" required="" oninvalid="this.setCustomValidity('Please Enter Your Phone Number')" 
+oninput="setCustomValidity('')"/>
+    </div>
+    <div style="padding-bottom: 18px;">Arrival date<span style="color: red;"> *</span><br/>
+    <input type="date"  name="data_7" style="width : 250px;" class="form-control"  min="2018-12-31" required="" oninvalid="this.setCustomValidity('Select A Date')" 
+    oninput="setCustomValidity('')"/>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.4.0/pikaday.min.js" type="text/javascript"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.4.0/css/pikaday.min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">new Pikaday({ field: document.getElementById('data_7') });</script>
+    <div style="padding-bottom: 18px;">Departure date<span style="color: red;"> *</span><br/>
+    <input type="date"  name="data_8" style="width : 250px;" class="form-control" required="" oninvalid="this.setCustomValidity('Select A Date')" 
+    oninput="setCustomValidity('')"/>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.4.0/pikaday.min.js" type="text/javascript"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.4.0/css/pikaday.min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">new Pikaday({ field: document.getElementById('data_8') });</script>
+    <div style="padding-bottom: 18px;">Number of adults<span style="color: red;"> *</span><br/>
+    <input type="number" name="data_9" style="width : 250px;" class="form-control"  min="1" required="" oninvalid="this.setCustomValidity('Enter The Number Of Adults')" 
+    oninput="setCustomValidity('')"/>
+    </div>
+    <div style="padding-bottom: 18px;">Number of children<br/>
+    <input type="number"  name="data_10" style="width : 250px;" class="form-control" min="0" required="" oninvalid="this.setCustomValidity('Please Enter Children Count')" 
+    oninput="setCustomValidity('')"/>
+    </div>
+    <div style="padding-bottom: 18px;">Questions / Comments<br/>
+    <textarea id="data_10" false name="data_11" style="width : 450px;" rows="6" class="form-control"></textarea>
+    </div>
+    <div style="padding-bottom: 18px;"><input name="skip_Submit" value="Submit" type="submit" onclick="validateForm()"/></div>
+    </div>
+    </section>
+    </form>
+</div>
+
+
+
+<section class="section section-follow teal darken-2 white-text center" id="contact" class="section-contact scrollspy">
+        <div class="row" >
+            <div class="col s12">
+                <h4>Follow Go More</h4>
+                <p>Follow Us On Social Media For Special Offers</p>
+                <a href="#" class="white-text"><i class="fab fa-facebook fa-4x"></i></a>
+                <a href="#" class="white-text"><i class="fab fa-twitter fa-4x"></i></a>
+                <a href="#" class="white-text"><i class="fab fa-linkedin fa-4x"></i></a>
+                <a href="#" class="white-text"><i class="fab fa-google-plus fa-4x"></i></a>
+                
+                <p> <img src="Picture2.png" alt="Smiley face" style="float:inherit;width:60px;height:60px;"> <br>&copy; 2018 Go More | All Rights Reserved</p>
+            </div>
+           
+            </div>
+        
+    
+
+</section>
+<script>   
+    
+        const ac=document.querySelector('.autocomplete');
+   M.Autocomplete.init(ac,{data:{
+       "Colombo":null,
+       "Kandy":null,
+       "Kurunegala":null,
+       "Galle":null,
+       "Jaffna":null,
+       "Matara":null,
+       "Anuradhapura":null,
+       "Puttlam":null,
+   }});
+   const mb=document.querySelectorAll('.materialboxed');
+           M.Materialbox.init(mb,{});
+
+
+
+           $(document).ready(function(){
+	   
+       var cloneTop = 0;
+         var cloneLeft = 0;
+         
+         $('.tile').click(function(){	  	
+           $(this).clone().appendTo($(this).parent()).addClass('tile-clone');								
+           var childPos = $(this).offset();
+           var parentPos = $(this).parent().offset();
+           var thisOffset = {
+               top: childPos.top - parentPos.top,
+               left: childPos.left - parentPos.left
+           }					
+           
+            cloneTop = thisOffset.top;
+            cloneLeft = thisOffset.left;
+                           
+           $('.tile-clone')
+           .css({'top':thisOffset.top + "px", 'left': + thisOffset.left + 'px'});		
+           $('#content-overay').show().animate({'opacity': 0.2}, 200);		
+           $('.tile-clone')
+           .css({'top':0, 'left': 0})
+           .addClass('animate');
+   
+           
+           setTimeout(function(){
+               $('#close').appendTo('.tile-clone').show();
+               $('#clone-content').appendTo('.tile-clone').show();			
+               
+               setTimeout(function(){$('#clone-content .headline').addClass('animate');}, 20);
+               setTimeout(function(){$('#clone-content .text').addClass('animate');}, 120);
+               $('.cx, .cy').addClass('s1');
+               setTimeout(function(){$('.cx, .cy').addClass('s2');}, 100);
+               setTimeout(function(){$('.cx, .cy').addClass('s3');}, 200);
+           }, 300);
+         });
+               
+         $('#close').click(function(){	
+             $('.cx, .cy').removeClass('s1 s2 s3');
+           $('.tile-clone').addClass('clearHover');
+           $('#clone-content .headline').removeClass('animate');
+            $('#clone-content .text').removeClass('animate');
+           $('#clone-content').fadeOut(200, function(){$(this).appendTo('#content');})
+           setTimeout(function(){	$(this).hide();}, 100);				
+               $('#close').fadeOut(200, function(){$(this).appendTo('#content');})
+               
+               setTimeout(function(){
+   
+                   $('.tile-clone')
+                   .css({'top':cloneTop + "px", 'left': + cloneLeft + 'px'})
+                   .removeClass('animate')
+                   .delay(200)
+                   .fadeOut(200);				
+                   
+                   $('#content-overay').animate({'opacity': 0}, 300, function(){$(this).hide();});
+                   setTimeout(function(){
+                       $('.tile-clone').remove();										
+                   }, 400);
+               }, 100);			
+         }); 		  
+      });
+           </script>
+
+
+</html>

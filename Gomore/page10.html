@@ -1,0 +1,1205 @@
+<html>
+    <head>
+        <title>Go More | Thrills</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="/maps/documentation/javascript/cgc/demos.css">
+        <link rel="icon" type="image/ico" href="logo.ico">
+    </head>
+    <style>
+    bodyy{
+        width: 660px;
+        margin: auto;
+    }
+    .privew{
+        float: left;
+        
+        width: 900px;
+        border-bottom: 6px solid #17dcff;
+    }
+    .section-follow .fa-4x{
+        margin:5px 10px;
+    }
+    .mn{
+        width: 25%;
+        overflow: hidden;
+        
+        margin: -2 auto;
+        
+        padding: 1px;
+        
+        -moz-transform: translateX(30%);
+  -webkit-transform: translateX(30%);
+  transform: translateX(30%);
+  -moz-animation: bouncing-text 25s linear infinite alternate;
+  -webkit-animation: bouncing-text 25s linear infinite alternate;
+  animation: bouncing-text 25s linear infinite alternate;
+    }
+
+     @keyframes bouncing-text {
+        0% {
+       -moz-transform: translateX(50%);
+       -webkit-transform: translateX(50%);
+       transform: translateX(50%);
+           }
+       100% {
+        -moz-transform: translateX(-15%);
+        -webkit-transform: translateX(-15%);
+         transform: translateX(-15%);
+           }
+       }
+
+
+    .mn button{
+        background: transparent;
+        margin: none;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+    }
+   /*#map{
+       height: 500px;
+       width: 50%;
+   }
+    /*.nj{
+    width: 25%;
+        overflow: hidden;
+        background: wheat;
+        margin: -2 auto;
+        
+        padding: 1px;
+}*/
+@import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
+/* End Fonts */
+/* Start Global rules */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* End Global rules */
+
+/* Start body rules */
+
+
+
+
+/* |||||||||||||||||||||||||||||||||||||||||||||*/
+/* //////////////////////////////////////////// */
+
+
+
+
+/* End body rules */
+
+/* Start form  attributes */
+form {
+    width: 650px;
+    
+    height:inherit;
+    border-radius: 5px;
+    margin: 2% auto;
+    box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+    padding: 2%;
+    background-image: linear-gradient(-225deg, #E3FDF5 50%, #FFE6FA 50%);
+}
+/* form Container */
+form .con {
+    display: -webkit-flex;
+    display: flex;
+  
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+  
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+  
+      margin: 0 auto;
+}
+
+/* the header form form */
+header {
+    margin: 2% auto 10% auto;
+    text-align: center;
+}
+/* Login title form form */
+header h2 {
+    font-size: 250%;
+    font-family: 'Playfair Display', serif;
+    color: #3e403f;
+}
+
+header p {letter-spacing: 0.05em;}
+
+
+
+/* //////////////////////////////////////////// */
+/* //////////////////////////////////////////// */
+
+
+.input-item {
+    background: #fff;
+    color: #333;
+    padding: 14.5px 0px 15px 9px;
+    border-radius: 5px 0px 0px 5px;
+}
+
+
+
+
+/* inputs form  */
+input[class="form-input"]{
+    width: 240px;
+    height: 50px;
+  
+    margin-top: 2%;
+    padding: 15px;
+    
+    font-size: 16px;
+    font-family: 'Abel', sans-serif;
+    color: #5E6472;
+  
+    outline: none;
+    border: none;
+  
+    border-radius: 0px 5px 5px 0px;
+    transition: 0.2s linear;
+    
+}
+input[id="txt-input"] {width: 250px;}
+/* focus  */
+input:focus {
+    transform: translateX(-2px);
+    border-radius: 5px;
+}
+
+/* //////////////////////////////////////////// */
+/* //////////////////////////////////////////// */
+
+/* input[type="text"] {min-width: 250px;} */
+/* buttons  */
+button {
+    display: inline-block;
+    color: #252537;
+  
+    width: 280px;
+    height: 50px;
+  
+    padding: 0 20px;
+    background: #fff;
+    border-radius: 5px;
+    
+    outline: none;
+    border: none;
+  
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s linear;
+    
+    margin: 7% auto;
+    letter-spacing: 0.05em;
+}
+/* Submits */
+.submits {
+    width: 48%;
+    display: inline-block;
+    float: left;
+    margin-left: 2%;
+}
+
+/*       Forgot Password button FAF3DD  */
+.frgt-pass {background: transparent;}
+
+/*     Sign Up button  */
+.sign-up {background: #B8F2E6;}
+
+
+/* buttons hover */
+button:hover {
+    transform: translatey(3px);
+    box-shadow: none;
+}
+
+/* buttons hover Animation */
+button:hover {
+    animation: ani9 0.4s ease-in-out infinite alternate;
+}
+@keyframes ani9 {
+    0% {
+        transform: translateY(3px);
+    }
+    100% {
+        transform: translateY(5px);
+    }
+}
+.place_holder{
+        color:gray;
+    }
+    option
+    {
+        color: #26b7ca;
+    }
+
+
+    .button {
+  border-radius: 2px;
+  background-color: teal;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  padding: 20px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+
+.chat-popup {
+  display:none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid teal;
+  z-index: 9;
+}
+
+
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: rgb(245, 246, 247);
+}
+
+
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #999999;
+  resize: none;
+  min-height: 200px;
+}
+
+
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+.form-container .btn {
+  background-color: rgb(16, 230, 52);
+  color: white;
+  padding: 20px 10px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:7px;
+  opacity: 0.8;
+   
+}
+
+
+.form-container .cancel {
+  background-color: rgb(255, 38, 0);
+}
+
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box; align-self: auto;}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+}
+
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+div.a {
+    text-align: center;
+    letter-spacing: 3px;
+}
+html, body{
+  padding: 0;
+  margin: 0;
+}
+body{
+  background-color:white;
+  color: rgb(24, 9, 9);
+  transition: 3s;
+  float: right;
+ 
+}
+.clearfix:before, .clearfix:after{
+  clear: both
+}
+.c{
+  color: rgba(187, 27, 27, 0.8);
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.dn{
+  display: none;
+}
+.pr{
+  position: relative;
+}
+.pa{
+  position: absolute;
+}
+.tc{
+  text-align: center;
+}
+.mt50{
+  margin-top: 50px;
+}
+.mb20{
+  margin-bottom: 20px;
+}
+.f20{
+  font-size: 20px;
+}
+.f25{
+  font-size: 25px;
+}
+.plr20{
+  padding: 0 20px;
+}
+.main_container{
+  margin: 50px auto 10px auto;
+  width: 310px;
+  height: 410px;
+  overflow: hidden;
+  position: relative;
+}
+.first, .second, .third{
+  background-color: rgba(0,0,0,.1);
+  border-radius: 5px;
+  width: 300px;
+  height: 400px;
+  margin: 10px; 
+  position: absolute;
+}
+.bag_container{
+  padding-top: 100px;
+  text-align: center;
+}
+.bag{
+  width: 100px;
+  margin: 0 auto;
+}
+.bag .base{
+  background-color: #E2574C;
+  height: 85px;  
+  border-radius: 5px;
+  margin-top: -10px;
+}
+.bag  .left_pocket, .right_pocket{
+  background-color: #BF392C;
+  height: 50px;
+  width: 10px;
+}
+.bag  .right_pocket{
+  border-top-right-radius: 5px;  
+  border-bottom-right-radius: 5px;
+  right: -10px;
+  top: 25px;
+}
+.bag  .left_pocket{
+  border-top-left-radius: 5px;  
+  border-bottom-left-radius: 5px;
+  left: -10px;
+  top: 25px;
+}
+.bag .head{
+  background-color: #BF392C;
+  height: 45px;
+  border-radius: 15px;
+  width: 110px;
+  z-index: 5;
+  left: -5px;
+  top: -30px;
+}
+.bag .handle{
+  border: 10px solid #324D5B;
+  height: 20px;
+  width: 20px;
+  top: -48px;
+  border-radius: 50%;
+  left: 30px;
+}
+.belt{
+  height: 80px;
+  width: 12px;
+  background-color: #EFC75E;
+  top: -30px;
+  z-index: 6;
+}
+.bag .belt1{
+  left: 18px;
+}
+.bag .belt2{
+  right: 18px;
+}
+.bag .clip{
+  background-color: #E4E7E7;
+  height: 15px;
+  width: 20px;
+  top: 25px;
+  z-index: 7;
+}
+.bag .clip1{
+  left: 14px;
+}
+.bag .clip2{
+  right: 14px;
+}
+
+.bookshelf{
+  margin: 0 auto;
+  margin-top: 60px;
+  width: 100px;
+  background-color: #F2EBD9;
+  height: 130px;
+  border: 4px solid #062746;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+}
+.bookshelf .window_container{
+  background-color: #FFCC75;
+  height: 106px;
+  margin-top: 20px;
+  border-top: 4px solid #062746; 
+}
+.bookshelf .window{
+  border: 4px solid #062746;
+  width: 80px;
+  height: 45px;
+  margin: 7px auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.book{
+  border-right: 4px solid #062746; 
+  width: 17px;
+  height: 100%;
+  float: left;
+}
+.book1{
+  background-color: rgb(231, 31, 31);
+}
+.book2{
+  background-color: rgb(221, 129, 36);
+}
+.book3{
+  background-color: rgb(247, 247, 247);
+}
+.book4{
+  background-color: rgb(25, 158, 158);
+  border-right: 0px;
+}
+.top_books{
+  position: absolute;
+  height: 36px;
+  top: -44px;
+  left: 6px;
+}
+.top_books .book1{
+  border-left: 4px solid #062746;
+  border-top: 4px solid #062746;
+  border-top-left-radius: 5px;
+}
+.top_books .book2{
+  border-top: 4px solid #062746; 
+  border-top-right-radius: 5px;
+}
+.chat_container{
+  padding-top: 85px;
+  text-align: center;
+  margin: 0 auto 100px auto;
+  width: 140px;
+}
+.chat{
+  height: 70px;
+  width: 100px;
+  border-radius: 10px;
+} 
+.chat:after{
+  content: '';
+  position: absolute;
+  left: 20px;
+  bottom: -20px;
+  border-right: 30px solid transparent;
+  border-left: 0px solid transparent;
+  border-top: 30px solid #fff;
+}
+.chat1{
+  background-color: #EBBA16;
+  z-index: 3;
+}
+.chat2{
+  background-color: #ED8A19;
+  margin-top: -100px;
+  margin-left: 40px;
+  transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
+  -ie-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+}
+.chat1:after{
+  border-top: 30px solid #EBBA16;
+}
+.chat2:after{
+  border-top: 30px solid #ED8A19;
+}
+.circle_container{
+  padding-left: 18px;
+}
+.chat1 .circle{
+  height: 12px;
+  width: 12px;
+  background-color: #fff;
+  border-radius: 50%;
+  float: left;
+  margin-left: 7px;
+  margin-top: 30px;
+}
+.navigations{
+  margin: 0px auto;
+  width: 300px;
+}
+.navigations .left, .navigations .right{
+  background-color: rgba(0,0,0,.3);
+  height: 22px;
+  width: 7px;
+  border-radius: 50%;
+  text-transform: capitalize;
+  padding: 20px 14px;
+  cursor: pointer;
+  float:initial;
+}
+.first{
+  left: 0;
+}
+.second{
+  left: 300px;
+}
+.third{
+  left: 600px;
+} 
+
+             
+    </style>
+    <body id="home" class="scrollspy">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+          <div class="navbar-fixed">
+              <nav class="blue">
+                  <div class="container">
+                    <div class="nav-wrapper">
+                            <a href="#" > <img src="Picture1.png"> </a>
+                        <a href="#" class="brand-logo" onclick="location.href='page2.html'">Go More</a>
+                        <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+                            <i class="material-icon">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#search">Site Map</a></li>
+                    <li><a href="#popular">Popular Places</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li></ul>
+                    </div>
+                  </div>
+              </nav>
+          </div>
+          <ul class="sidenav" id="mobile-nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#search">Site Map</a></li>
+                <li><a href="#popular">Popular Places</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li></ul>
+                
+                                  <img src="header-tittle-img-canyoning-abseiling.jpg" width="100%" height="500"> 
+                                  
+                               
+                </selection>
+        <a href="">Home > Thrills</a>
+        <br>
+        <h1 style="border-bottom: 6px solid #2fb6ce">Thrills</h1>
+        <br>
+        <article>
+            <div class="privew">
+            
+            <div class="bodyy">
+                <p>With varying climates and Geography packed into a small island Sri Lanka offers a range of adventures from the top of the mountains to the depths of the oceans. 
+
+                        Other than taking a dip in the oceans or snorkelling, scuba diving and surfing are the most popular beach sports in the country. Scuba diving has long history in the country. Today the oceans filled with coral gardens, multitude of exotic fishes and ancient wrecks Sri Lanka offers one of the best diving experiences in the world. Although comparatively new to the country surfing too has made its mark in the Southern and Eastern coasts of the island for the last twenty five years. The sea around Sri Lanka is also one of the most challenging marine game fishing locations while white water rafting, Kayaking and canoeing are some of the relatively new water sports practiced in the country.
+                        
+                        With multitude of roads winding through expanding mountains, lush green forests, paddy fields, parks and sleepy villages, Sri Lanka also offers many opportunities to keen hikers and trekkers. Trail blazing through the tracks and paths on horse or elephant back too is a novel experience introduced recently.
+                        
+                        Experience the thrills of crumbling rocks beneath the feet, head spinning heights and the earth expanding beneath when conquering many mountains of Sri Lanka or take over waterfall climbing with exciting climbs like the rock face of Bambarakanda waterfall, the tallest in the country.
+                        
+                        With many an adventures packed within few miles of each other Sri Lanka is an adventure itself waiting to happen.
+                </p>
+            </div></div>
+        </article>
+
+
+        <ul>
+                <html>
+                        <head>
+                           
+                          <title>Travel</title>
+                          <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+                          
+                        </head>
+                        <div class="bo">
+                        <body>
+                          <div class="main_container">
+                            <div class="first">
+                              <div class="pr bag_container">
+                                <div class="pr bag">
+                                  <div class="pa handle"></div>
+                                  <div class="pa head"></div>
+                                  <div class="pa belt belt1"></div>
+                                  <div class="pa belt belt2"></div>
+                                  <div class="pa clip clip1"></div>
+                                  <div class="pa clip clip2"></div>
+                                  <div class="pr base">
+                                    <div class="pa left_pocket"></div>
+                                    <div class="pa right_pocket"></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="tc f25 mb20 mt50">
+                                Travel Guide
+                              </div>
+                              <div class="tc f20 plr20 c">
+                                Detailed guides to help You plan your trip.
+                              </div>
+                            </div>
+                            <div class="second">
+                              <div class="pr bookshelf">
+                                <div class="pr window_container">
+                                  <div class="pr window">
+                                    <div class="book book1"></div>
+                                    <div class="book book2"></div>
+                                    <div class="book book3"></div>
+                                    <div class="book book4"></div>
+                                  </div>
+                                  <div class="pa top_books">
+                                    <div class="book book1"></div>
+                                    <div class="book book2"></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="tc f25 mb20 mt50">
+                                Travel Blog
+                              </div>
+                              <div class="tc f20 plr20 c">
+                                Share your travel experience with a vast network of fellow travellers.
+                              </div>
+                            </div>
+                            <div class="third">
+                              <div class="pr chat_container">
+                                <div class="pr chat chat1">
+                                  <div class="pr circle_container">
+                                    <div class="circle circle1"></div>
+                                    <div class="circle circle2"></div>
+                                    <div class="circle circle2"></div>
+                                  </div>
+                                </div>
+                                <div class="pr chat chat2"></div>
+                              </div>
+                              <div class="tc f25 mb20 mt50">
+                                Chat
+                              </div>
+                              <div class="tc f20 plr20 c">
+                                Connect with  people and exchange your travel stories.
+                              </div>
+                            </div>
+                          </div>
+                  
+                          <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+                        </body>
+                        </html>
+                        </ul>
+
+
+        <div id="map"></div>
+        <section id="search" class="search section-gallery scrollspy"></section>
+          <div class="map">
+                <h3
+                style="text-align:center">Directions For Your <span class="teal-text">THRILL</span> Experience
+            </h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3404898.1368334107!2d78.7662028403738!3d7.658657750115224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sadventure!5e0!3m2!1sen!2slk!4v1539370635797" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+        
+         
+
+
+</section>
+<section id="gallery" class="section section-gallery scrollspy">
+ <div class="container">
+     <h4 class="center">
+         <span class="teal-text">Photo</span>Gallery
+     </h4>
+     <div class="row">
+         <div class="col s12 m3">
+            <img src="sri-lanka-tour-operator-slider-1.jpg" alt="" class="materialboxed responsive-img">
+         </div>
+         <div class="row">
+             <div class="col s12 m3">
+                <img src="The-Wanderer3.jpg" alt="" class="materialboxed responsive-img">
+             </div>
+             <div class="row">
+                 <div class="col s12 m3">
+                    <img src="HPSH_sri-lanka_sigiriya_group-pax_scenic-point.jpg" alt="" class="materialboxed responsive-img">
+                 </div>
+                 <div class="row">
+                     <div class="col s12 m3">
+                        <img src="Destinations_Sri-Lanka_Southern-Beaches_Mirissa_iStock_000045634172_Large.jpg" alt="" class="materialboxed responsive-img">
+                     </div>
+                     <div class="row">
+                         <div class="col s12 m3">
+                            <img src="Surf-Yoga-Adventure-in-Sri-Lanka.015.jpeg" alt="" class="materialboxed responsive-img">
+                         </div>
+                         <div class="row">
+                             <div class="col s12 m3">
+                                <img src="Sri-Lanka-Challenge-10-1920x1080.jpg" alt="" class="materialboxed responsive-img">
+                             </div>
+                             <div class="row">
+                                 <div class="col s12 m3">
+                                    <img src="Sri-Lanka-Challenge-8-1920x1080.jpg" alt="" class="materialboxed responsive-img">
+                                 </div>
+                                 <div class="row">
+                                     <div class="col s12 m3">
+                                        <img src="maxresdefault (1).jpg" alt="" class="materialboxed responsive-img">
+                                     </div>
+                                  
+ 
+                                   
+ </div>
+ <section id="popular" class="section section-popular scrollspy"></section>
+ <h4 class="center">
+        <span class="teal-text">Popular</span>Places
+    </h4>
+ <video width="100%" height="360" video-align="center"controls> <source src="Kitulgala White Water Rafting Sri lanka.mp4"  type="video/mp4"> </video>
+</section>
+
+<h3 style="text-align:center">Book A  <span class="teal-text"> Thrill Ride </span>
+</h3>
+<div class="overlay">
+     
+        
+                <form action="thrill.php" method="POST">
+           <div class="con">
+          
+           <header class="head-form">
+              <h2>Water Rafting Reservation</h2>
+              
+            
+           </header>
+        
+           <br>
+           <div class="field-set">
+             
+          
+             
+                
+                 <input class="form-input" id="txt-input" type="text" placeholder="Name" required name="name" minlength="6">
+             
+              <br>
+              <div class="field-set">
+             
+          
+             
+                
+                    <input class="form-input" id="email" type="email" placeholder="Email Address" required name="email">
+                
+                 <br>
+                 <div class="field-set">
+             
+          
+             
+                
+                        <input class="form-input" id="" type="date" placeholder="Date" required name="date" min="2018-11-20">
+                    
+                     <br>
+                     <div class="dropdown">
+                            <input type="text" placeholder="City" list="listid9" name="city" required>
+                            <datalist id="listid9">
+                                <option> Kithulgala </option>
+                                <option> Kegalle</option>
+                                
+                            </datalist>
+
+</div>
+<br>
+            <div class="dropdown">
+                </div>
+                     <div class="dropdown">
+                            <input type="text" placeholder="Select The Package" list="listid4" name="pkg" required >
+                            <datalist id="listid4">
+                                <option> Rafting (1 Day)</option>
+                                <option> Rafting And Adventure (2 Days)</option>
+                                <option> Camping (3 Days) </option>
+                                <option> Adventure And Camping (3 Days)</option>
+                                <option> Water Sliding (1 Day)</option>
+                                <option> All (5 Day Package)</option>
+                            </datalist>
+
+</div>
+<br>
+            <div class="dropdown">
+                
+                    <div class="dropdown">
+                            <input type="text" placeholder="Difficulty Level" list="listid5" name="level" required>
+                            <datalist id="listid5">
+                                <option> </option>
+                                <option> Any</option>
+                                <option> Mild </option>
+                                <option> Intermediate </option>
+                                <option> Advanced (Adults Only)</option>
+                            </datalist>
+
+</div>
+<br>
+            <div class="dropdown">
+                    <div class="dropdown">
+                
+                            <div class="dropdown">
+                                    <input type="text" placeholder="Trip Lenght" list="listid6" name="trip" required>
+                                    <datalist id="listid6">
+                                        <option> 1 Day</option>
+                                        <option> 2 Days </option>
+                                        <option> 3 Days</option>
+                                        <option> 5 Days</option>
+                                        <option> 10 Days </option>
+                                    </datalist>
+        
+        </div>
+        <br>
+                   
+                                    <div class="dropdown">
+                                
+                                            <div class="dropdown">
+                                                    <input type="text" placeholder="Select A Company" list="listid7" name="company" required>
+                                                    <datalist id="listid7">
+                                                        <option> White Rafting</option>
+                                                        <option> Team 36</option>
+                                                       
+                                                    </datalist>
+                        
+                        </div>
+                        <br>
+                                    <div class="dropdown">
+                                        </div>
+                                        <div class="field-set">
+             
+          
+             
+                
+                                                <input class="form-input" id="adult" type="number" placeholder="Adult" required name="adult" min="1" >
+                                            
+                                             <br>     
+                                             <div class="field-set">
+             
+          
+             
+                
+                                                    <input class="form-input" id="child" type="number" placeholder="Children (Older Than 15 Years)" required name="child" min="0">
+                                                
+                                                 <br> 
+         
+              <button class="log-in"> Submit </button>
+              <button class="log-in" onclick="aa()" name="reset" type="reset"> Cancel </button>
+           </div>
+          
+  
+           
+     </div>
+     </div>
+     </div>
+     </div>
+     </div>
+     </div>
+     </div>
+     </div>
+     </div>
+     </form>
+     <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+
+              <div class="a">
+              <p > <img src="Picture2.png" width="200" height="200" class="center"> <br>Leaving So Soon?.<br>Come Again and pride the great Adventures!!</p>
+            </div>
+            </div>
+
+          </div>
+     <section>
+            <button class="open-button" onclick="window.location.href='https://ruchiraworld.000webhostapp.com/contact.html'">Chat</button>
+            </section>    
+      
+
+    
+ 
+        
+
+<section id="contact" class="contact section-popular teal darken-1 white-text center scrollspy"> 
+        <section class="section section-contact teal darken-2 white-text center">
+           <div class="container">
+               <div class="row">
+                   <div class="col s12">
+                       <h4>Follow Go More</h4>
+                       <p>Follow us on social media for special offers</p>
+                       <a href="#" class="white-text"><i class="fab fa-facebook fa-4x"></i></a>
+                       <a href="#" class="white-text"><i class="fab fa-twitter fa-4x"></i></a>
+                       <a href="#" class="white-text"><i class="fab fa-linkedin fa-4x"></i></a>
+                       <a href="#" class="white-text"><i class="fab fa-google-plus fa-4x"></i></a>
+                       <p> <img src="Picture2.png" alt="Smiley face" style="float:inherit;width:60px;height:60px;"> <br>&copy; 2018 Go More | All Rights Reserved</p>
+                   </div>
+               </div>
+           </div>
+<script>
+function show() {
+    var p = document.getElementById('pwd');
+    p.setAttribute('type', 'text');
+}
+
+function hide() {
+    var p = document.getElementById('pwd');
+    p.setAttribute('type', 'password');
+}
+
+var pwShown = 0;
+
+document.getElementById("eye").addEventListener("click", function () {
+    if (pwShown == 0) {
+        pwShown = 1;
+        show();
+    } else {
+        pwShown = 0;
+        hide();
+    }
+}, false);
+
+
+    function refreshPage(){
+    window.location.reload();
+} 
+function openForm() {
+    document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+}
+var modal = document.getElementById('myModal');
+
+
+var btn = document.getElementById("myBtn");
+
+
+var span = document.getElementsByClassName("close")[0];
+
+function aa() {
+    modal.style.display = "block";
+}
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+$('reset').click(function(){
+   $('input[type="text"]').val('');
+});
+
+$(document).ready(function() {
+
+  $("#submit").click(function(e) {
+
+   //   console.log("hi");
+     // e.preventDefault();
+//
+
+    // var dataToSend = $("#wild").serializeArray();
+    // //console.log(dataToSend);
+
+
+    //  alert('inserted');
+
+
+
+
+    //    console.log($("#nameq").val());
+ // var name=$("#nameq").val();
+ // var date=$("#date").val();
+ //
+ //
+ //    $.ajax({
+ //        url: "wild.php",
+ //        type: "POST",
+ //        data: {name:date},
+ //        cache: false,
+ //        success: function(php_output)
+ //        {
+ //            console.log(php_output);
+ //        // $(".wildform").html(php_output);
+ //        }
+ //    });
+  });
+});
+$(document).ready(function(){
+      $(".first").addClass("active");
+      $(".navigations .right").on("click", function(){
+        next();
+      });
+      $(".navigations .left").on("click", function(){
+        prev();
+      });
+
+      function next(){
+        $('.left').show();
+        var current_element = $("body").find(".active");
+        changeColorNext(current_element);
+        current_element.removeClass("active").next().addClass("active");
+        current_element.animate({left: "-310px"}, 500).next().animate({left: "0px"}, 500);    
+        if(current_element.attr("class") == 'second'){
+          $(".right").hide();
+        }
+      }
+
+      function prev(){
+        $('.right').show();
+        var current_element = $("body").find(".active");
+        changeColorPrev(current_element);
+        current_element.removeClass("active").prev().addClass("active");
+        current_element.animate({left: "310px",}, 500).prev().animate({left: "0px"}, 500);
+        if(current_element.attr("class") == 'second'){
+          $(".left").hide();
+        }        
+      }
+      function changeColorNext(current_element){
+        if(current_element.next().attr("class") == "first"){
+          $("body").css({"background-color":"#FFFFFF"});
+        }
+        if(current_element.next().attr("class") == "second"){
+          $("body").css({"background-color": "##FFFFFF"});
+        }
+        if(current_element.next().attr("class") == "third"){
+          $("body").css({"background-color": "##FFFFFF"});
+        }
+      }
+      function changeColorPrev(current_element){
+        if(current_element.prev().attr("class") == "first"){
+          $("body").css({"background-color": "##FFFFFF"});
+        }
+        if(current_element.prev().attr("class") == "second"){
+          $("body").css({"background-color": "##FFFFFF"});
+        }
+        if(current_element.prev().attr("class") == "third"){
+          $("body").css({"background-color": "##FFFFFF"});
+        }
+      }
+    });
+</script>
+
+
+
+
+
+
+    </body>
+</html>

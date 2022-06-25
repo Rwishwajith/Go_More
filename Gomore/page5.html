@@ -1,0 +1,942 @@
+<html>
+    <head>
+        <title>Go More | Heritage</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="/maps/documentation/javascript/cgc/demos.css">
+        <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/ico" href="logo.ico">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <style>
+    bodyy{
+        width: 100%;
+        margin: auto;
+    }
+    .privew{
+        float: left;
+        border-bottom: 6px solid #26b7ca;
+        width: 900px;
+    }
+    .section-follow .fa-4x{
+        margin:5px 0px;
+    }
+    .mn{
+        width: 25%;
+        overflow: hidden;
+        
+        margin: -2 auto;
+        
+        padding: 1px;
+        
+        -moz-transform: translateX(30%);
+  -webkit-transform: translateX(30%);
+  transform: translateX(30%);
+  -moz-animation: bouncing-text 25s linear infinite alternate;
+  -webkit-animation: bouncing-text 25s linear infinite alternate;
+  animation: bouncing-text 25s linear infinite alternate;
+
+    }
+  
+       @keyframes bouncing-text {
+        0% {
+       -moz-transform: translateX(50%);
+       -webkit-transform: translateX(50%);
+       transform: translateX(50%);
+           }
+       100% {
+        -moz-transform: translateX(-15%);
+        -webkit-transform: translateX(-15%);
+         transform: translateX(-15%);
+           }
+       }
+
+
+    .mn button{
+        background: transparent;
+        margin: none;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+    }
+  /* #map{
+       height: 500px;
+       width: 50%;
+   }
+    /*.nj{
+    width: 25%;
+        overflow: hidden;
+        background: wheat;
+        margin: -2 auto;
+        
+        padding: 1px;
+}*/
+    
+     .safari
+     {
+        margin: 0;
+        padding: 0;
+     }
+
+
+    .place_holder{
+        color:gray;
+    }
+    option
+    {
+        color: #26b7ca;
+    }
+
+
+    .button {
+  border-radius: 2px;
+  background-color: teal;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  padding: 20px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+
+.chat-popup {
+  display:none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid teal;
+  z-index: 9;
+}
+
+
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: rgb(245, 246, 247);
+}
+
+
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #999999;
+  resize: none;
+  min-height: 200px;
+}
+
+
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+.form-container .btn {
+  background-color: rgb(16, 230, 52);
+  color: white;
+  padding: 20px 10px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:7px;
+  opacity: 0.8;
+   
+}
+
+
+.form-container .cancel {
+  background-color: rgb(255, 38, 0);
+}
+
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box; align-self: auto;}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+}
+
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+div.a {
+    text-align: center;
+    letter-spacing: 3px;
+}
+ 
+.card-panel
+     {
+        cursor: pointer;
+     }   
+     .card-panel:hover{
+            background:teal;
+            transition: .30s;}
+
+      html, body{
+  padding: 0;
+  margin: 0;
+}
+body{
+  background-color:white;
+  color: rgb(24, 9, 9);
+  transition: 3s;
+  float: right;
+ 
+}
+.clearfix:before, .clearfix:after{
+  clear: both
+}
+.c{
+  color: rgba(187, 27, 27, 0.8);
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.dn{
+  display: none;
+}
+.pr{
+  position: relative;
+}
+.pa{
+  position: absolute;
+}
+.tc{
+  text-align: center;
+}
+.mt50{
+  margin-top: 50px;
+}
+.mb20{
+  margin-bottom: 20px;
+}
+.f20{
+  font-size: 20px;
+}
+.f25{
+  font-size: 25px;
+}
+.plr20{
+  padding: 0 20px;
+}
+.main_container{
+  margin: 50px auto 10px auto;
+  width: 310px;
+  height: 410px;
+  overflow: hidden;
+  position: relative;
+}
+.first, .second, .third{
+  background-color: rgba(0,0,0,.1);
+  border-radius: 5px;
+  width: 300px;
+  height: 400px;
+  margin: 10px; 
+  position: absolute;
+}
+.bag_container{
+  padding-top: 100px;
+  text-align: center;
+}
+.bag{
+  width: 100px;
+  margin: 0 auto;
+}
+.bag .base{
+  background-color: #E2574C;
+  height: 85px;  
+  border-radius: 5px;
+  margin-top: -10px;
+}
+.bag  .left_pocket, .right_pocket{
+  background-color: #BF392C;
+  height: 50px;
+  width: 10px;
+}
+.bag  .right_pocket{
+  border-top-right-radius: 5px;  
+  border-bottom-right-radius: 5px;
+  right: -10px;
+  top: 25px;
+}
+.bag  .left_pocket{
+  border-top-left-radius: 5px;  
+  border-bottom-left-radius: 5px;
+  left: -10px;
+  top: 25px;
+}
+.bag .head{
+  background-color: #BF392C;
+  height: 45px;
+  border-radius: 15px;
+  width: 110px;
+  z-index: 5;
+  left: -5px;
+  top: -30px;
+}
+.bag .handle{
+  border: 10px solid #324D5B;
+  height: 20px;
+  width: 20px;
+  top: -48px;
+  border-radius: 50%;
+  left: 30px;
+}
+.belt{
+  height: 80px;
+  width: 12px;
+  background-color: #EFC75E;
+  top: -30px;
+  z-index: 6;
+}
+.bag .belt1{
+  left: 18px;
+}
+.bag .belt2{
+  right: 18px;
+}
+.bag .clip{
+  background-color: #E4E7E7;
+  height: 15px;
+  width: 20px;
+  top: 25px;
+  z-index: 7;
+}
+.bag .clip1{
+  left: 14px;
+}
+.bag .clip2{
+  right: 14px;
+}
+
+.bookshelf{
+  margin: 0 auto;
+  margin-top: 60px;
+  width: 100px;
+  background-color: #F2EBD9;
+  height: 130px;
+  border: 4px solid #062746;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+}
+.bookshelf .window_container{
+  background-color: #FFCC75;
+  height: 106px;
+  margin-top: 20px;
+  border-top: 4px solid #062746; 
+}
+.bookshelf .window{
+  border: 4px solid #062746;
+  width: 80px;
+  height: 45px;
+  margin: 7px auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.book{
+  border-right: 4px solid #062746; 
+  width: 17px;
+  height: 100%;
+  float: left;
+}
+.book1{
+  background-color: rgb(231, 31, 31);
+}
+.book2{
+  background-color: rgb(221, 129, 36);
+}
+.book3{
+  background-color: rgb(247, 247, 247);
+}
+.book4{
+  background-color: rgb(25, 158, 158);
+  border-right: 0px;
+}
+.top_books{
+  position: absolute;
+  height: 36px;
+  top: -44px;
+  left: 6px;
+}
+.top_books .book1{
+  border-left: 4px solid #062746;
+  border-top: 4px solid #062746;
+  border-top-left-radius: 5px;
+}
+.top_books .book2{
+  border-top: 4px solid #062746; 
+  border-top-right-radius: 5px;
+}
+.chat_container{
+  padding-top: 85px;
+  text-align: center;
+  margin: 0 auto 100px auto;
+  width: 140px;
+}
+.chat{
+  height: 70px;
+  width: 100px;
+  border-radius: 10px;
+} 
+.chat:after{
+  content: '';
+  position: absolute;
+  left: 20px;
+  bottom: -20px;
+  border-right: 30px solid transparent;
+  border-left: 0px solid transparent;
+  border-top: 30px solid #fff;
+}
+.chat1{
+  background-color: #EBBA16;
+  z-index: 3;
+}
+.chat2{
+  background-color: #ED8A19;
+  margin-top: -100px;
+  margin-left: 40px;
+  transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
+  -ie-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+}
+.chat1:after{
+  border-top: 30px solid #EBBA16;
+}
+.chat2:after{
+  border-top: 30px solid #ED8A19;
+}
+.circle_container{
+  padding-left: 18px;
+}
+.chat1 .circle{
+  height: 12px;
+  width: 12px;
+  background-color: #fff;
+  border-radius: 50%;
+  float: left;
+  margin-left: 7px;
+  margin-top: 30px;
+}
+.navigations{
+  margin: 0px auto;
+  width: 300px;
+}
+.navigations .left, .navigations .right{
+  background-color: rgba(0,0,0,.3);
+  height: 22px;
+  width: 7px;
+  border-radius: 50%;
+  text-transform: capitalize;
+  padding: 20px 14px;
+  cursor: pointer;
+  float:initial;
+}
+.first{
+  left: 0;
+}
+.second{
+  left: 300px;
+}
+.third{
+  left: 600px;
+} 
+          
+    </style>
+    <body id="home" class="scrollspy">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+          <div class="navbar-fixed">
+              <nav class="blue">
+                  <div class="container">
+                    <div class="nav-wrapper">
+                            <a href="#" > <img src="Picture1.png"> </a>
+                        <a href="#" class="brand-logo" onclick="location.href='page2.html'">Go More</a>
+                        <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+                            <i class="material-icon">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#search">Site Map</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#popular">Top</a></li>
+                  
+                    <li><a href="#contact">Contact</a></li></ul>
+                    </div>
+                  </div>
+              </nav>
+          </div>
+          <ul class="sidenav" id="mobile-nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#search">Site Map</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#popular">Top</a></li>
+              
+                <li><a href="#contact">Contact</a></li></ul>
+                
+                                  <img src="8c66f30c-df78-44bb-ad1c-17c8c2bd5cf6.jpg" width="100%" height="500"> 
+                                  
+                               
+                
+        <a href="">Home > Heritage</a>
+        <br>
+        <h1 style="border-bottom: 6px solid #2fb6ce">Heritage</h1>
+        <br>
+        <article>
+            <div class="privew">
+            
+            <div class="bodyy">
+                <p>
+                    With a history expanding over 3000years, Sri Lanka holds some of world’s ancient cities including Anuradhapura, Polonnaruwa and Digamadulla; their once glorious townships, palaces, temples, monasteries, hospitals and theaters intricately carved and modeled out of stone lay and abandoned and forgotten with time amidst the soaring jungles. Of all the ancient cities of Lanka, the most famed and most exquisite is the Kingdom of Anuradhapura. Sri Lanka’s third and the longest serving capital and one of the oldest continuously inhabited cities in the world is also one of the most sacred cities of World Buddhists. It was the capital of Sri Lanka from the Fourth Century BC up to the turn of the eleventh Century and was one of the most stable and durable centers of political power and urban life in South Asia. Sigiriya, a fifth century AD fortress and a water garden displays some of the most futuristic elements of landscaping and some of the oldest murals recorded in the country. Polonnaruwa, the second most ancient kingdom of the country boasts of Irrigation systems that are far superior to those of the and they still provide irrigation water to the farmers in and around Polonnaruwa.Digamadulla, the Eastern kingdom of Sri Lanka was the agricultural and spiritual capital of the country during the Anuradhapura kingdom. Sri Lanka’s last kingdom the Kingdome of Kandy is a testament to the Sri Lankan’s ability to pick up and rise from ashes. After being burned and ravaged more than thrice by the invading Portuguese the Kandyan Kingdom still holds beautifully carved and built houses, palaces and temple preserved for nearly 500 years.
+                </p>
+            </div></div>
+        </article>
+
+
+        
+
+    
+        <ul>
+                <html>
+                        <head>
+                           
+                          <title>Travel</title>
+                          <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+                          
+                        </head>
+                        <div class="bo">
+                        <body>
+                          <div class="main_container">
+                            <div class="first">
+                              <div class="pr bag_container">
+                                <div class="pr bag">
+                                  <div class="pa handle"></div>
+                                  <div class="pa head"></div>
+                                  <div class="pa belt belt1"></div>
+                                  <div class="pa belt belt2"></div>
+                                  <div class="pa clip clip1"></div>
+                                  <div class="pa clip clip2"></div>
+                                  <div class="pr base">
+                                    <div class="pa left_pocket"></div>
+                                    <div class="pa right_pocket"></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="tc f25 mb20 mt50">
+                                Travel Guide
+                              </div>
+                              <div class="tc f20 plr20 c">
+                                Detailed guides to help You plan your trip.
+                              </div>
+                            </div>
+                            <div class="second">
+                              <div class="pr bookshelf">
+                                <div class="pr window_container">
+                                  <div class="pr window">
+                                    <div class="book book1"></div>
+                                    <div class="book book2"></div>
+                                    <div class="book book3"></div>
+                                    <div class="book book4"></div>
+                                  </div>
+                                  <div class="pa top_books">
+                                    <div class="book book1"></div>
+                                    <div class="book book2"></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="tc f25 mb20 mt50">
+                                Travel Blog
+                              </div>
+                              <div class="tc f20 plr20 c">
+                                Share your travel experience with a vast network of fellow travellers.
+                              </div>
+                            </div>
+                            <div class="third">
+                              <div class="pr chat_container">
+                                <div class="pr chat chat1">
+                                  <div class="pr circle_container">
+                                    <div class="circle circle1"></div>
+                                    <div class="circle circle2"></div>
+                                    <div class="circle circle2"></div>
+                                  </div>
+                                </div>
+                                <div class="pr chat chat2"></div>
+                              </div>
+                              <div class="tc f25 mb20 mt50">
+                                Chat
+                              </div>
+                              <div class="tc f20 plr20 c">
+                                Connect with  people and exchange your travel stories.
+                              </div>
+                            </div>
+                          </div>
+                          <div class="pr navigations" float="right">
+                            <div class="left dn fl c" float="right"></div>
+                            <div class="right fr c"></div>
+                          </div>
+                          <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+                        </body>
+                        </html>
+                        </ul>
+
+        <section id="search" class="section section-search scrollspy">
+        <div id="map"></div>
+        <div class="map">
+                <h3
+                    style="text-align:center">Directions For Sri Lankan<span class="teal-text"> Heritage</span>
+                </h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d126341.59748021358!2d80.3133491563682!3d8.285383655549552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1stemple!5e0!3m2!1sen!2slk!4v1540922904047" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+            
+        
+         
+
+
+</section>
+<section id="gallery" class="section section-gallery scrollspy">
+ <div class="container">
+     <h4 class="center">
+         <span class="teal-text">Photo</span>Gallery
+     </h4>
+     <div class="row">
+         <div class="col s12 m3">
+            <img src="img2.jpg" alt="" class="materialboxed responsive-img" >
+         </div>
+         <div class="row">
+             <div class="col s12 m3">
+                <img src="pol.jpg" alt="" class="materialboxed responsive-img">
+             </div>
+             <div class="row">
+                 <div class="col s12 m3">
+                    <img src="tour-package-sri-lanka-Culture-and-Heritage-Tour-Package-of-Sri-Lanka.jpg" alt="" class="materialboxed responsive-img">
+                 </div>
+                 <div class="row">
+                     <div class="col s12 m3">
+                        <img src="lanka-ramayana-special-6-days.jpg" alt="" class="materialboxed responsive-img">
+                     </div>
+                     <div class="row">
+                         <div class="col s12 m3">
+                            <img src="maxresdefault (3).jpg" alt="" class="materialboxed responsive-img">
+                         </div>
+                         <div class="row">
+                             <div class="col s12 m3">
+                                <img src="32617098355_958b85b8b8_b.jpg" alt="" class="materialboxed responsive-img">
+                             </div>
+                             <div class="row">
+                                 <div class="col s12 m3">
+                                    <img src="miracle-lanka-things-to-do-world-heritage-sites-sri-lanka.jpg" alt="" class="materialboxed responsive-img">
+                                 </div>
+                                 <div class="row">
+                                     <div class="col s12 m3">
+                                        <img src="polonnaruwa-ancient-ruins.jpg" alt="" class="materialboxed responsive-img">
+                                     </div>
+                                   
+                                     
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                            </section>
+                                            
+                                     
+                                            <section id="popular" class="section section-popular scrollspy">                                      
+<div class="types">
+    <h3 style="text-align:center"> Heritage   <span class="teal-text"> In Sri Lanka  </span> </h3>
+
+<section class="section secction-icon gray lighten-4 center"><div class="container">
+    <div class="row">
+
+        <div class="col s12 m60">
+             <div class="card-panel" type="button">
+                <img src="15405247754_034cf3ee6a_k.jpg" alt="Smiley face" style="float:inherit;width:50%;height:200px;"> 
+                 <h4>Sacred City of Kandy</h4>
+                 <p>District: Kandy<br>
+                    Typical Weather: Warm & Sunny<br>
+                    Distance from Colombo: 113 KM</p><br>
+                 <p> Kandy, a mountain city in Sri Lanka, was home to the Sinhalese kings from 1592 to 1815. It is also the site of Sri Dalada Maligawa, also called the Temple of the Tooth, as a special container holds a tooth of the Buddha. Over the years, the relic came to be very important politically; the belief was that the holder of the sacred tooth was the one who would have power over the Buddhist population. The Sacred City of Kandy was appointed the status of World Heritage Site in 1988, mainly due to the Temple of the Tooth.</p>
+             </div>
+         </div>
+         <div class="col s12 m60">
+                 <div class="card-panel" type="button" >
+                    <img src="9553706895_ab6b7f7904_k-1.jpg" alt="Smiley face" style="float:inherit;width:50%;height:200px;"> 
+                     <h4>Ancient City of Sigiriya</h4>
+                     <p>District: Dambulla<br>
+                        Typical Weather: Warm & Sunny<br>
+                        Distance from Colombo: 177 km</p><br>
+                     <p>The rocky outcrop of Sigiriya holds the ancient remains of King Kassapa’s palace from the 5th century AD. The top is reachable by stairs built on the side of the mountain and features the Lion Rock and the remains of the palace and fortress. Visitors will see the magnificence of the place when they reach the top, complete with a 360-degree view of the jungle below. The water reservoirs that collect rainwater are still there and in good condition. Sigiriya was named a UNESCO World Heritage Site in 1982..</p>
+                 </div>
+             </div>
+             <div class="col s12 m60">
+                <div class="card-panel" type="button">
+                   <img src="13385480575_33842a6f66_k-1024x680.jpg" alt="Smiley face" style="float:inherit;width:50%;height:200px;"> 
+                    <h4>Sacred City of Anuradhapura </h4>
+                    <p>District: Anuradhapura<br>
+                        Typical Weather: Warm & Sunny<br>
+                        Distance from Colombo: 200.7 km</p><br>
+                    <p>The city of Anuradhapura was the first ancient capital of Sri Lanka, and it is still a sacred Buddhist religious center. It lies around 200 kilometers (124 miles) north of Colombo, the current capital. Buddhist worshippers and pilgrims visit the well-preserved ruins of the temples and religious centers along the bank of the river Malwathu Oya year-round. The city is also home to one of the largest and most sacred Bodhi trees in Sri Lanka, believed to be a descendant of the Bodhi tree where Buddha was illuminated. Anuradhapura became a UNESCO World Heritage Site in 1982.</p>
+                </div>
+            </div>
+            <div class="col s12 m60">
+                <div class="card-panel" type="button" >
+                   <img src="4059203157_068e740dc2_b.jpg" alt="Smiley face" style="float:inherit;width:50%;height:200px;"> 
+                    <h4>Ancient City of Polonnaruwa</h4>
+                    <p>District: Polonnaruwa<br>
+                        Typical Weather: Warm & Sunny<br>
+                        Distance from Colombo: 227.7 km</p><br>
+                    <p>After the destruction of Anuradhapura in the 1st century, Polonnaruwa became the second capital of Sri Lanka. The remains include Bhramanic constructions from the Cholas civilization as well as the garden city that was constructed on the site in the 12th century. Polonnaruwa is part of the Cultural Triangle, along with Anuradhapura and Sigiriya. This site was named a UNESCO World Heritage Site in 1982.</p>
+                </div>
+            </div>
+            <div class="col s12 m60">
+                <div class="card-panel" type="button" >
+                   <img src="7063106121_81c2a3713f_k.jpg" alt="Smiley face" style="float:inherit;width:50%;height:200px;"> 
+                    <h4>Dambulla Cave Temple</h4>
+                    <p>District: Dambulla<br>
+                        Typical Weather: Warm & Sunny<br>
+                        Distance from Colombo: 159.7 km</p><br>
+                    <p>The Golden Dambulla Cave Temple has been a pilgrimage destination for the past 22 centuries. It’s also the largest and best-preserved cave temple on the island (there are others). The Dambulla Cave Temple was named a UNESCO World Heritage Site in 1991 in order to preserve the magnificent wall paintings and over 150 statues in and around the temple.</p>
+                </div>
+            </div>
+       </div>
+</div></section>
+
+
+      
+
+                        <div id="myModal" class="modal">
+                                <div class="modal-content">
+                                  <span class="close">&times;</span>
+
+                                  <div class="a">
+                                  <p > <img src="Picture2.png" width="200" height="200" class="center"> <br>Leaving So Soon?.<br>Come Again and pride the great Adventures!!</p>
+                                </div>
+                                </div>
+
+                              </div>
+    
+
+<section>
+        <button class="open-button" onclick="window.location.href='https://ruchiraworld.000webhostapp.com/contact.html'">Chat</button>
+</section>
+
+
+<section id="contact" class="contact section-popular teal darken-1 white-text center scrollspy"> 
+    <section class="contact section-contact teal darken-2 white-text center">
+       <div class="container">
+           <div class="row">
+               <div class="col s12">
+                   <h4>Follow Go More</h4>
+                   <p>Follow us on social media for special offers</p>
+                   <a href="#" class="white-text"><i class="fab fa-facebook fa-4x"></i></a>
+                   <a href="#" class="white-text"><i class="fab fa-twitter fa-4x"></i></a>
+                   <a href="#" class="white-text"><i class="fab fa-linkedin fa-4x"></i></a>
+                   <a href="#" class="white-text"><i class="fab fa-google-plus fa-4x"></i></a>
+                   <p> <img src="Picture2.png" alt="Smiley face" style="float:inherit;width:60px;height:60px;"> <br>&copy; 2018 Go More | All Rights Reserved</p>
+               </div>
+           </div>
+       </div>
+
+
+</section>
+</section>
+
+<script>
+    function refreshPage(){
+    window.location.reload();
+} 
+function openForm() {
+    document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+}
+var modal = document.getElementById('myModal');
+
+
+var btn = document.getElementById("myBtn");
+
+
+var span = document.getElementsByClassName("close")[0];
+
+function aa() {
+    modal.style.display = "block";
+}
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+$('reset').click(function(){
+   $('input[type="text"]').val('');
+});
+
+$(document).ready(function() {
+
+  $("#submit").click(function(e) {
+
+  });
+});
+
+
+  $(document).ready(function(){
+      $(".first").addClass("active");
+      $(".navigations .right").on("click", function(){
+        next();
+      });
+      $(".navigations .left").on("click", function(){
+        prev();
+      });
+
+      function next(){
+        $('.left').show();
+        var current_element = $("body").find(".active");
+        changeColorNext(current_element);
+        current_element.removeClass("active").next().addClass("active");
+        current_element.animate({left: "-310px"}, 500).next().animate({left: "0px"}, 500);    
+        if(current_element.attr("class") == 'second'){
+          $(".right").hide();
+        }
+      }
+
+      function prev(){
+        $('.right').show();
+        var current_element = $("body").find(".active");
+        changeColorPrev(current_element);
+        current_element.removeClass("active").prev().addClass("active");
+        current_element.animate({left: "310px",}, 500).prev().animate({left: "0px"}, 500);
+        if(current_element.attr("class") == 'second'){
+          $(".left").hide();
+        }        
+      }
+      function changeColorNext(current_element){
+        if(current_element.next().attr("class") == "first"){
+          $("body").css({"background-color":"#FFFFFF"});
+        }
+        if(current_element.next().attr("class") == "second"){
+          $("body").css({"background-color": "##FFFFFF"});
+        }
+        if(current_element.next().attr("class") == "third"){
+          $("body").css({"background-color": "##FFFFFF"});
+        }
+      }
+      function changeColorPrev(current_element){
+        if(current_element.prev().attr("class") == "first"){
+          $("body").css({"background-color": "##FFFFFF"});
+        }
+        if(current_element.prev().attr("class") == "second"){
+          $("body").css({"background-color": "##FFFFFF"});
+        }
+        if(current_element.prev().attr("class") == "third"){
+          $("body").css({"background-color": "##FFFFFF"});
+        }
+      }
+    });
+    
+</script>
+
+
+
+
+
+</section>
+</body>
+</html>

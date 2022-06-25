@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <meta name="viewport"   content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="/maps/documentation/javascript/cgc/demos.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="shopping-cart.css">
+        <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+        <script src="https://www.paypalobjects.com/api/checkout.js" async></script>
+        
+    <title> Enroll Me</title>
+    <link rel="icon" type="image/ico" href="logo.ico">
+</head>
+<body>
+<style>
+body{
+
+        width: 50%;
+        margin: auto;
+      
+}
+        
+    
+
+.privew{
+    
+    float: left;
+    width: 100%;
+    border-bottom: 6px solid #2281b8;
+
+}
+#myCarousel{
+    height: 350px;
+    Width:100%;
+}
+.toprated{
+    color: rgb(13, 14, 14);
+         text-transform: uppercase;
+         font-size: 70px;
+         text-align: center;
+         letter-spacing:10px;
+}
+
+
+body {
+  font-family: Arial;
+  font-size: 17px;
+  padding: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap; 
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; 
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; 
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; 
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+.section-follow .fa-4x{
+        margin:5px 10px;
+        
+        float: inherit;
+    }
+
+
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+.button {
+  border-radius: 2px;
+  background-color: teal;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  padding: 20px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.total{
+  color: rgb(13, 14, 14);
+         text-transform: uppercase;
+         font-size: 70px;
+         text-align: left;
+         letter-spacing:10px;
+}
+.paypal-button-container
+{
+
+}
+</style>
+
+
+
+       
+<div class="formpay">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</div>
+<form action="shoppingpay.php" method="POST" name="shopping">
+           
+       </form>
+      </section>
+      <form action="shoppingpay.php" method="POST">
+        <h3>Please Enter the following Details</h3> 
+            
+        <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+        <input type="text" id="sname" name="name" placeholder="John Shimmer" required title="Should Enter 2 Part OF the Name" minlength="6">
+        <label for="email"><i class="fa fa-envelope"></i> Email</label>
+        <input type="email" id="email1" name="email" placeholder="john@example.com" required>
+        <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+        <input type="text" id="adr" name="address" placeholder="542 W. Paris"  required>
+        <label for="city"><i class="fa fa-institution"></i> City</label>
+        <input type="text" id="city1" name="city" placeholder="Paris" required>
+            <label for="state">State</label>
+            <input type="text" id="state1" name="state" placeholder="NY" required>
+          <div class="col-50">
+            <label for="zip">Zip</label>
+            <input type="number" id="zip1" name="zip" placeholder="10001" required="" oninvalid="this.setCustomValidity('Please Enter The Zip Code')" 
+            oninput="setCustomValidity('')">
+        <h3>Payment</h3>
+        <label for="fname">Pay With paypal</label>
+        <div id="paypal-button-container"></div>
+<script src="https://www.paypalobjects.com/api/checkout.js"></script>
+
+        <label for="fname">Accepted Cards</label>
+        <div class="icon-container">
+          <i class="fa fa-cc-visa" style="color:navy;"></i>
+          <i class="fa fa-cc-amex" style="color:blue;"></i>
+          <i class="fa fa-cc-mastercard" style="color:red;"></i>
+          <i class="fa fa-cc-discover" style="color:orange;"></i>
+          
+        </div>
+        <label for="cname">Name on Card</label>
+        <input type="text" id="cname1" name="cardname" placeholder="John Lennon" required="" oninvalid="this.setCustomValidity('Please Enter Cardholder Name')" 
+        oninput="setCustomValidity('')">
+        <label for="ccnum">Credit card number</label>
+        <input type="text" id="ccnum1" name="cardnumber" placeholder="1111-2222-3333-4444" required min="0" minlength="16" maxlength="16">
+        <label for="expmonth">Exp Month number</label>
+        <input type="number" id="expmonth1" name="expmonth" placeholder="01 , 02...." required min="00" max="12">
+
+            <label for="expyear">Exp Year</label>
+            <input type="number" id="expyear1" name="expyear" placeholder="2018" min="2018" required>
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv1" name="cvv" placeholder="352" required pattern="\d*" min="0" minlength="3" maxlength="5">
+            
+  
+    <input type="submit" value="Continue to checkout" class="btn" name="done">
+    
+    </div>
+      </form>
+  </form>
+<br>
+
+
+<section class="section section-follow teal darken-2 white-text center" id="contact" class="section-contact scrollspy">
+        <div class="row" >
+            <div class="col s12">
+                <h4>Follow Go More</h4>
+                <p>Follow Us On Social Media For Special Offers</p>
+                <a href="#" class="white-text"><i class="fab fa-facebook fa-4x"></i></a>
+                <a href="#" class="white-text"><i class="fab fa-twitter fa-4x"></i></a>
+                <a href="#" class="white-text"><i class="fab fa-linkedin fa-4x"></i></a>
+                <a href="#" class="white-text"><i class="fab fa-google-plus fa-4x"></i></a>
+                <p> <img src="favicon.png" alt="Smiley face" style="float:inherit;width:60px;height:60px;"> <br>&copy; හස්තිශෛලය University| All Rights Reserved</p>
+            </div>
+           
+            </div>
+        
+    
+
+</section>
+
+    
+
+
+
+
+<script>
+
+        
+// Render the PayPal button
+paypal.Button.render({
+
+env: 'sandbox', 
+
+// Specify the style of the button
+style: {
+  
+  layout: 'vertical',  // horizontal | vertical
+  size:   'medium',    // medium | large | responsive
+  shape:  'rect',      // pill | rect
+  color:  'gold'       // gold | blue | silver | white | black
+},
+
+// Specify allowed and disallowed funding sources
+
+funding: {
+  allowed: [
+    paypal.FUNDING.CARD,
+    paypal.FUNDING.CREDIT
+  ],
+  disallowed: []
+},
+
+client: {
+  sandbox: 'AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R',
+  production: '<insert production client id>'
+},
+
+payment: function (data, actions) {
+  return actions.payment.create({
+    payment: {
+      transactions: [
+        {
+          amount: {
+            total: '100',
+            currency: 'USD'
+          }
+        }
+      ]
+    }
+  });
+},
+
+onAuthorize: function (data, actions) {
+  return actions.payment.execute()
+    .then(function () {
+      window.alert('Payment Complete!');
+    });
+}
+}, '#paypal-button-container');
+</script>
+
+ 
+       
+
+</body>
+</html>

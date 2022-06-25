@@ -1,0 +1,701 @@
+<html>
+    <head>
+        <title>Go More | Festive</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="/maps/documentation/javascript/cgc/demos.css">
+        
+        <link rel="icon" type="image/ico" href="logo.ico">
+
+    </head>
+    <style>
+    body{
+        width: 100%;
+        margin: auto;
+    }
+    .privew{
+        float: left;
+        width: 900px;
+        border-bottom: 6px solid #2281b8;
+    }
+    .section-follow .fa-4x{
+        margin:5px 10px;
+    }
+    .mn{
+        width: 25%;
+        overflow: hidden;
+        
+        margin: -2 auto;
+
+        
+        padding: 1px;
+        -moz-transform: translateX(30%);
+  -webkit-transform: translateX(30%);
+  transform: translateX(30%);
+  -moz-animation: bouncing-text 25s linear infinite alternate;
+  -webkit-animation: bouncing-text 25s linear infinite alternate;
+  animation: bouncing-text 25s linear infinite alternate;
+    }
+
+     @keyframes bouncing-text {
+        0% {
+       -moz-transform: translateX(50%);
+       -webkit-transform: translateX(50%);
+       transform: translateX(50%);
+           }
+       100% {
+        -moz-transform: translateX(-15%);
+        -webkit-transform: translateX(-15%);
+         transform: translateX(-15%);
+           }
+       }
+    
+    .mn button{
+        background: transparent;
+        margin: none;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+    }
+   /*#map{
+       height: 500px;
+       width: 50%;
+   }
+    /*.nj{
+    width: 25%;
+        overflow: hidden;
+        background: wheat;
+        margin: -2 auto;
+        
+        padding: 1px;
+}*/
+
+        html, body{
+  padding: 0;
+  margin: 0;
+}
+body{
+  background-color:white;
+  color: rgb(24, 9, 9);
+  transition: 3s;
+  float: right;
+ 
+}
+.clearfix:before, .clearfix:after{
+  clear: both
+}
+.c{
+  color: rgba(187, 27, 27, 0.8);
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.dn{
+  display: none;
+}
+.pr{
+  position: relative;
+}
+.pa{
+  position: absolute;
+}
+.tc{
+  text-align: center;
+}
+.mt50{
+  margin-top: 50px;
+}
+.mb20{
+  margin-bottom: 20px;
+}
+.f20{
+  font-size: 20px;
+}
+.f25{
+  font-size: 25px;
+}
+.plr20{
+  padding: 0 20px;
+}
+.main_container{
+  margin: 50px auto 10px auto;
+  width: 310px;
+  height: 410px;
+  overflow: hidden;
+  position: relative;
+}
+.first, .second, .third{
+  background-color: rgba(0,0,0,.1);
+  border-radius: 5px;
+  width: 300px;
+  height: 400px;
+  margin: 10px; 
+  position: absolute;
+}
+.bag_container{
+  padding-top: 100px;
+  text-align: center;
+}
+.bag{
+  width: 100px;
+  margin: 0 auto;
+}
+.bag .base{
+  background-color: #E2574C;
+  height: 85px;  
+  border-radius: 5px;
+  margin-top: -10px;
+}
+.bag  .left_pocket, .right_pocket{
+  background-color: #BF392C;
+  height: 50px;
+  width: 10px;
+}
+.bag  .right_pocket{
+  border-top-right-radius: 5px;  
+  border-bottom-right-radius: 5px;
+  right: -10px;
+  top: 25px;
+}
+.bag  .left_pocket{
+  border-top-left-radius: 5px;  
+  border-bottom-left-radius: 5px;
+  left: -10px;
+  top: 25px;
+}
+.bag .head{
+  background-color: #BF392C;
+  height: 45px;
+  border-radius: 15px;
+  width: 110px;
+  z-index: 5;
+  left: -5px;
+  top: -30px;
+}
+.bag .handle{
+  border: 10px solid #324D5B;
+  height: 20px;
+  width: 20px;
+  top: -48px;
+  border-radius: 50%;
+  left: 30px;
+}
+.belt{
+  height: 80px;
+  width: 12px;
+  background-color: #EFC75E;
+  top: -30px;
+  z-index: 6;
+}
+.bag .belt1{
+  left: 18px;
+}
+.bag .belt2{
+  right: 18px;
+}
+.bag .clip{
+  background-color: #E4E7E7;
+  height: 15px;
+  width: 20px;
+  top: 25px;
+  z-index: 7;
+}
+.bag .clip1{
+  left: 14px;
+}
+.bag .clip2{
+  right: 14px;
+}
+
+.bookshelf{
+  margin: 0 auto;
+  margin-top: 60px;
+  width: 100px;
+  background-color: #F2EBD9;
+  height: 130px;
+  border: 4px solid #062746;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+}
+.bookshelf .window_container{
+  background-color: #FFCC75;
+  height: 106px;
+  margin-top: 20px;
+  border-top: 4px solid #062746; 
+}
+.bookshelf .window{
+  border: 4px solid #062746;
+  width: 80px;
+  height: 45px;
+  margin: 7px auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.book{
+  border-right: 4px solid #062746; 
+  width: 17px;
+  height: 100%;
+  float: left;
+}
+.book1{
+  background-color: rgb(231, 31, 31);
+}
+.book2{
+  background-color: rgb(221, 129, 36);
+}
+.book3{
+  background-color: rgb(247, 247, 247);
+}
+.book4{
+  background-color: rgb(25, 158, 158);
+  border-right: 0px;
+}
+.top_books{
+  position: absolute;
+  height: 36px;
+  top: -44px;
+  left: 6px;
+}
+.top_books .book1{
+  border-left: 4px solid #062746;
+  border-top: 4px solid #062746;
+  border-top-left-radius: 5px;
+}
+.top_books .book2{
+  border-top: 4px solid #062746; 
+  border-top-right-radius: 5px;
+}
+.chat_container{
+  padding-top: 85px;
+  text-align: center;
+  margin: 0 auto 100px auto;
+  width: 140px;
+}
+.chat{
+  height: 70px;
+  width: 100px;
+  border-radius: 10px;
+} 
+.chat:after{
+  content: '';
+  position: absolute;
+  left: 20px;
+  bottom: -20px;
+  border-right: 30px solid transparent;
+  border-left: 0px solid transparent;
+  border-top: 30px solid #fff;
+}
+.chat1{
+  background-color: #EBBA16;
+  z-index: 3;
+}
+.chat2{
+  background-color: #ED8A19;
+  margin-top: -100px;
+  margin-left: 40px;
+  transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
+  -ie-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+}
+.chat1:after{
+  border-top: 30px solid #EBBA16;
+}
+.chat2:after{
+  border-top: 30px solid #ED8A19;
+}
+.circle_container{
+  padding-left: 18px;
+}
+.chat1 .circle{
+  height: 12px;
+  width: 12px;
+  background-color: #fff;
+  border-radius: 50%;
+  float: left;
+  margin-left: 7px;
+  margin-top: 30px;
+}
+.navigations{
+  margin: 0px auto;
+  width: 300px;
+}
+.navigations .left, .navigations .right{
+  background-color: rgba(0,0,0,.3);
+  height: 22px;
+  width: 7px;
+  border-radius: 50%;
+  text-transform: capitalize;
+  padding: 20px 14px;
+  cursor: pointer;
+  float:initial;
+}
+.first{
+  left: 0;
+}
+.second{
+  left: 300px;
+}
+.third{
+  left: 600px;
+} 
+         
+    </style>
+    <body id="home" class="scrollspy">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+          <div class="navbar-fixed">
+              <nav class="blue">
+                  <div class="container">
+                    <div class="nav-wrapper">
+                            <a href="#" > <img src="Picture1.png"> </a>
+                        <a href="#" class="brand-logo" onclick="location.href='page2.html'">Go More</a>
+                        <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+                            <i class="material-icon">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#search">Site Map</a></li>
+                    <li><a href="#popular">Popular Places</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li></ul>
+                    </div>
+                  </div>
+              </nav>
+          </div>
+          <ul class="sidenav" id="mobile-nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#search">Site Map</a></li>
+                <li><a href="#popular">Popular Places</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li></ul>
+                
+                                  <img src="kandy-esala-perahera-1.jpg" width="100%" height="500"> 
+                                  
+                               
+                </selection>
+        <a href="">Home > Festive</a>
+        <br>
+        <h1 style="border-bottom: 6px solid #2fb6ce" >Festive</h1>
+        <br>
+        <article>
+            <div class="privew">
+            
+            <div class="bodyy">
+                <p>
+                        With a population composed with many a races and religions, Sri Lanka is never short of festivals and celebrations. Every month brings a celebration either religious or cultural importance, making Sri Lanka one of the countries with highest number of celebrations and holidays. 
+
+                        The Sinhala-Tamil New year festival in April is the most important cultural festival in the country. The festival marks the beginning of the New Year and the end of harvesting season. A lengthy holiday and a table full of oily traditional delicacies like kokis, makes the New Year festival one of the long awaited festivals in the country.
+                        
+                        The May full moon poya day or Vesak is the most important religious celebration in Sri Lanka, where Buddhists celebrate the nativity, enlightenment and passing away of Lord Buddha with many celebrations. Sri Lankans of every religion crowd the roads to enjoy Vesak decorations including pandals and lanterns and many a makeshift alm houses that line the roads offering every food item from beverages, dessert to main meals.
+                        
+                        In August are the Esala festivals in Kandy and Kataragama. The Kataragama Esala Festival is a multi-religious festival where devotes use fire walking and extreme self-penance to shows their piety to Lord Kataragama. The Kandy Esala Perahera or the Dalanda Perahera is the largest cultural parade in the world and showcases the best of Sri Lankan dancing and music and the best of the domesticated tuskers in the country.
+                        
+
+                </p>
+            </div></div>
+        </article>
+
+
+        <ul>
+                <html>
+                        <head>
+                           
+                          <title>Travel</title>
+                          <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+                          
+                        </head>
+                        <div class="bo">
+                        <body>
+                          <div class="main_container">
+                            <div class="first">
+                              <div class="pr bag_container">
+                                <div class="pr bag">
+                                  <div class="pa handle"></div>
+                                  <div class="pa head"></div>
+                                  <div class="pa belt belt1"></div>
+                                  <div class="pa belt belt2"></div>
+                                  <div class="pa clip clip1"></div>
+                                  <div class="pa clip clip2"></div>
+                                  <div class="pr base">
+                                    <div class="pa left_pocket"></div>
+                                    <div class="pa right_pocket"></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="tc f25 mb20 mt50">
+                                Travel Guide
+                              </div>
+                              <div class="tc f20 plr20 c">
+                                Detailed guides to help You plan your trip.
+                              </div>
+                            </div>
+                            <div class="second">
+                              <div class="pr bookshelf">
+                                <div class="pr window_container">
+                                  <div class="pr window">
+                                    <div class="book book1"></div>
+                                    <div class="book book2"></div>
+                                    <div class="book book3"></div>
+                                    <div class="book book4"></div>
+                                  </div>
+                                  <div class="pa top_books">
+                                    <div class="book book1"></div>
+                                    <div class="book book2"></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="tc f25 mb20 mt50">
+                                Travel Blog
+                              </div>
+                              <div class="tc f20 plr20 c">
+                                Share your travel experience with a vast network of fellow travellers.
+                              </div>
+                            </div>
+                            <div class="third">
+                              <div class="pr chat_container">
+                                <div class="pr chat chat1">
+                                  <div class="pr circle_container">
+                                    <div class="circle circle1"></div>
+                                    <div class="circle circle2"></div>
+                                    <div class="circle circle2"></div>
+                                  </div>
+                                </div>
+                                <div class="pr chat chat2"></div>
+                              </div>
+                              <div class="tc f25 mb20 mt50">
+                                Chat
+                              </div>
+                              <div class="tc f20 plr20 c">
+                                Connect with  people and exchange your travel stories.
+                              </div>
+                            </div>
+                          </div>
+                        
+                          </div>
+                          <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+                        </body>
+                        </html>
+                       
+
+    
+        <section id="search" class="search section-gallery scrollspy"></section>
+        <div id="map"></div>
+        <div class="map">
+                <h3
+                style="text-align:center">Directions For Your <span class="teal-text">FESTIVE</span> Experience
+            </h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2022155.340341399!2d79.33141547119307!3d8.203090663634926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sreligious+destination!5e0!3m2!1sen!2slk!4v1539369502313" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        
+         
+
+
+</section>
+<section id="gallery" class="section section-gallery scrollspy">
+ <div class="container">
+     <h4 class="center">
+         <span class="teal-text">Photo</span>Gallery
+     </h4>
+     <div class="row">
+         <div class="col s12 m3">
+            <img src="Sri-Lanka-Festival-1-1200x600.jpg" alt="" class="materialboxed responsive-img">
+         </div>
+         <div class="row">
+             <div class="col s12 m3">
+                <img src="traditional-dancing.jpg" alt="" class="materialboxed responsive-img">
+             </div>
+             <div class="row">
+                 <div class="col s12 m3">
+                    <img src="THAIPUSAM.jpg" alt="" class="materialboxed responsive-img">
+                 </div>
+                 <div class="row">
+                     <div class="col s12 m3">
+                        <img src="maxresdefault (2).jpg" alt="" class="materialboxed responsive-img">
+                     </div>
+                     <div class="row">
+                         <div class="col s12 m3">
+                            <img src="5871934607_de1137c5d0_b.jpg" alt="" class="materialboxed responsive-img">
+                         </div>
+                         <div class="row">
+                             <div class="col s12 m3">
+                                <img src="vaggagag.jpg" alt="" class="materialboxed responsive-img">
+                             </div>
+                             <div class="row">
+                                 <div class="col s12 m3">
+                                    <img src="Kolompura-Kowlsara-5.jpg" alt="" class="materialboxed responsive-img">
+                                 </div>
+                                 <div class="row">
+                                     <div class="col s12 m3">
+                                        <img src="colombo-sri-lanka-8th-apr-2018-people-celebrate-the-traditional-sinhala-and-tamil-new-year-in-colombo-sri-lanka-on-april-8-2018-credit-ajith-pereraxinhuaalamy-live-news-MBA105.jpg" alt="" class="materialboxed responsive-img">
+                                     </div>
+                                    
+            
+            
+            
+                                    </div>
+                                </div>
+                                <section id="popular" class="section section-popular scrollspy"></section>
+                                <h4 class="center">
+                                       <span class="teal-text">Popular</span>Places
+                                   </h4>
+                                <video width="100%" height="360" video-align="center"controls> <source src="Kandy Esala Perahera 2018.mp4"  type="video/mp4"> </video>
+                               </section>
+
+
+                               <section id="popular" class="section section-popular scrollspy">                                      
+                                    <div class="types">
+                                        <h3 style="text-align:center"> Heritage   <span class="teal-text"> In Sri Lanka  </span> </h3>
+                                    
+                                    <section class="section secction-icon gray lighten-4 center"><div class="container">
+                                        <div class="row">
+                                    
+                                            <div class="col s12 m60">
+                                                 <div class="card-panel" type="button" >
+                                                    <img src="DSC_0686.jpg" alt="Smiley face" style="float:inherit;width:50%;height:200px;"> 
+                                                     <h4>Sinhala and Tamil New Year</h4>
+                                                     <p>Month: April 13,14<br>
+                                                        Ethnic : Sinhala And Tamil<br>
+                                                     </p>
+                                                     <p> Being a significant anniversary to celebrate the traditional New Year, Sinhala and Tamil New Year is celebrated by not only the Buddhists and Hindus alike, but by most Sri Lankans with much pomp and fanfare. The festival generally falls on the 13th or the 14th of April every year, and marks the end of the harvest season and spring. The whole island will be permeated with a festive atmosphere as people prepare for the upcoming celebrations by cleaning and decorating houses, making traditional dishes and sweets, etc. During the very day, people will wear their best or newly bought clothes and be busy with various activities, such as setting off firecrackers and fireworks, lighting the hearth (usually by the lady of the house), enjoying the first meal of the New Year with families, anointing oils by parents to their children as a symbol of blessing, performing rituals, exchanging plates of sweets with neighbors, and taking part in various fun-filled games and activities in the streets.</p>
+                                                 </div>
+                                             </div>
+                                             <div class="col s12 m60">
+                                                     <div class="card-panel" type="button">
+                                                        <img src="Vesak.jpg" alt="Smiley face" style="float:inherit;width:50%;height:200px;"> 
+                                                         <h4>Vesak</h4>
+                                                         <p>Month: May<br>
+                                                            Ethnic : Buddhists<br>
+                                                        </p><br>
+                                                         <p>Vesak is a religious and cultural festival in Sri Lanka, and the hollowest festival for Buddhists, which commemorates the birth, enlightenment, and death of Gautama Buddha (Sakyamuni), the founder of Buddhism. It is celebrated on the full moon day of the lunar month of Vesak which is usually in the Gregorian month of May, and continue for about a week. Streets, shops and the front of houses are decorated with myriad colorful lanterns called Vesak kuudu, which signify the light of the Buddha, Dharma and the Sangha. Tiny clay coconut-oil lamps are lit in remote regions mainly in villages, while in major cities like Colombo, Kandy, Galle, etc., electrically-lit pandals called thoranas are erected with richly decorated panels depicting events happening in the Buddha's life. Each pandal illustrates a story from the Jataka tales.</p>
+                                                     </div>
+                                                 </div>
+                                                 <div class="col s12 m60">
+                                                    <div class="card-panel" type="button" >
+                                                       <img src="mahinthale-arhat-mahinda-and-devanampiyathissa.jpg" alt="Smiley face" style="float:inherit;width:50%;height:200px;"> 
+                                                        <h4> Poson Festival</h4>
+                                                        <p>Month: June<br>
+                                                            Ethnic : Buddhists<br>
+                                                        <p>Poson Festival, also known as Poson Poya Day, is celebrated by Buddhists island-wide to commemorate the introduction of Buddhism in Sri Lanka in the third century BC, thus it is of great historical and religious significance. It is the second most important festival for Buddhists right after the Vesak. Similar to the Vesak Festival, there are also lanterns, thoranas and food stalls. Buddhists dress in white pilgrimage to sacred places and engage in many religious activities. Many choose to climb the many steps to the top of the Mihintale rock in Mihintale, which is popular as the main center and landmark in Anuradhapura during the festival.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col s12 m60">
+                                                    <div class="card-panel" type="button" >
+                                                       <img src="kandy-esala-perahera-sri-lanka-1.jpg" alt="Smiley face" style="float:inherit;width:50%;height:200px;"> 
+                                                        <h4>Kandy Esala Perahera</h4>
+                                                        <p>Month: July<br>
+                                                            Ethnic : Buddhists<br>
+                                                            Where : Kandy City<br>
+                                                        <p>Kandy Esala Perahera, also known as The Festival of the Tooth, is a grand festival celebrated annually on the full moon day in July or August in Kandy to pay homage to one of the only two survival scared tooth relic of Gautama Buddha, which is enshrined in the Temple of the Tooth in the city. During this Buddhist festival, there will be a unique procession consisting of various traditional and cultural local dances and many elephants exquisitely adorned with lavish garments and gems. The procession will pass through several streets, thus people can admire the pomp and feel the festive mood on one side of the streets.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col s12 m60">
+                                                    <div class="card-panel" type="button" >
+                                                       <img src="hindu-temple-dammbulla_8506.jpg" alt="Smiley face" style="float:inherit;width:50%;height:200px;"> 
+                                                        <h4>Kataragama Festival</h4>
+                                                        <p>Month:usually in July or August, at the same time as Kandy's Esala Perahera<br>
+                                                            Ethnic : Hindu<br>
+                                                            Where : Kataragama town in the south of Sri Lanka<br>
+                                                        <p>Kataragama Festival is a predominantly Hindu festival held annually in mainly in the remote southern town of Kataragama, one of the holiest towns in Sri Lanka. It attracts thousands of pilgrims from the island's main faiths over a two-week period. These pilgrims including Hindus, Muslims and Veddas gather in the town to fulfill their vows or to seek knowledge and guidance from Lord Kataragama. There is also a procession with elephants, regional dancers, singers, musicians, fire eaters, acrobatics and jugglers performing to the beat of thundering drums and chanting, which is truly not to be missed.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col s12 m60">
+                                                        <div class="card-panel" type="button">
+                                                           <img src="29-vs-dipawali-celebration-759.jpg" alt="Smiley face" style="float:inherit;width:50%;height:200px;"> 
+                                                            <h4>Deepavali</h4>
+                                                            <p>Month: Usually between mid-October and mid-November<br>
+                                                                Ethnic : Hindu<br>
+                                                              
+                                                            <p>Deepavali (or Diwali) is a Hindu festival of lights, one of the most popular festivals of Hinduism, which spiritually signifies the victory of light over darkness, good over evil, knowledge over ignorance, and hope over despair. It is celebrated widely in countries with significant Hindu populations. In Sri Lanka, it is celebrated by the Tamil community. The celebration includes many traditional aspects of Deepavali, such as fireworks, a large meal, family reunions, singing and dancing. Traditionally, people wear new clothes, exchange gifts, perform puja and visit to Hindu temple. Hindus light oil lamps to invite the blessings of Lakshmi, the goddess of wealth, and to banish all evil. In the evening, they burn firecrackers. During the festival, millions of lights are shining on housetops, outside doors and windows, along the streets, and around temples and other buildings in the communities.
+
+                                                                </p>
+                                                        </div>
+                                                    </div>
+                                           </div>
+                                    </div></section>
+
+                                    
+
+
+<section id="contact" class="contact section-popular teal darken-1 white-text center scrollspy"> 
+        <section class="contact section-contact teal darken-2 white-text center">
+           <div class="container">
+               <div class="row">
+                   <div class="col s12">
+                       <h4>Follow Go More</h4>
+                       <p>Follow us on social media for special offers</p>
+                       <a href="#" class="white-text"><i class="fab fa-facebook fa-4x"></i></a>
+                       <a href="#" class="white-text"><i class="fab fa-twitter fa-4x"></i></a>
+                       <a href="#" class="white-text"><i class="fab fa-linkedin fa-4x"></i></a>
+                       <a href="#" class="white-text"><i class="fab fa-google-plus fa-4x"></i></a>
+                       <p> <img src="Picture2.png" alt="Smiley face" style="float:inherit;width:60px;height:60px;"> <br>&copy; 2018 Go More | All Rights Reserved</p>
+                   </div>
+               </div>
+           </div>
+
+
+</section>
+<script>
+    $(document).ready(function(){
+      $(".first").addClass("active");
+      $(".navigations .right").on("click", function(){
+        next();
+      });
+      $(".navigations .left").on("click", function(){
+        prev();
+      });
+
+      function next(){
+        $('.left').show();
+        var current_element = $("body").find(".active");
+        changeColorNext(current_element);
+        current_element.removeClass("active").next().addClass("active");
+        current_element.animate({left: "-310px"}, 500).next().animate({left: "0px"}, 500);    
+        if(current_element.attr("class") == 'second'){
+          $(".right").hide();
+        }
+      }
+
+      function prev(){
+        $('.right').show();
+        var current_element = $("body").find(".active");
+        changeColorPrev(current_element);
+        current_element.removeClass("active").prev().addClass("active");
+        current_element.animate({left: "310px",}, 500).prev().animate({left: "0px"}, 500);
+        if(current_element.attr("class") == 'second'){
+          $(".left").hide();
+        }        
+      }
+      function changeColorNext(current_element){
+        if(current_element.next().attr("class") == "first"){
+          $("body").css({"background-color":"#FFFFFF"});
+        }
+        if(current_element.next().attr("class") == "second"){
+          $("body").css({"background-color": "##FFFFFF"});
+        }
+        if(current_element.next().attr("class") == "third"){
+          $("body").css({"background-color": "##FFFFFF"});
+        }
+      }
+      function changeColorPrev(current_element){
+        if(current_element.prev().attr("class") == "first"){
+          $("body").css({"background-color": "##FFFFFF"});
+        }
+        if(current_element.prev().attr("class") == "second"){
+          $("body").css({"background-color": "##FFFFFF"});
+        }
+        if(current_element.prev().attr("class") == "third"){
+          $("body").css({"background-color": "##FFFFFF"});
+        }
+      }
+    });
+</script>
+
+    </body>
+</html>

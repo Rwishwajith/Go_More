@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title> Go More | Home</title>
+    <link rel="icon" type="image/ico" href="logo.ico">
+
+ 
+</head>
+<style>
+    .section-search input{
+        padding: 5px;
+        font-size: 18px;
+        border: #f4f4f4 0px solid;
+      
+    }
+    .btn{
+        border: 100%;
+    }
+    .section-follow .fa-4x{
+        margin:5px 10px;
+    }
+   
+     .card-panel
+     {
+        cursor: pointer;
+     }   
+     .card-panel:hover{
+            background:rgb(27, 101, 197);
+            transition: .30s;}
+      
+      .logo
+      {
+          width: 16%;
+          height: 16%;
+      }
+      body {
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+}
+</style>
+  <body id="home" class="scrollspy">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    
+  <div class="navbar-fixed">
+      <nav class="blue">
+          <div class="container">
+            <div class="nav-wrapper">
+                 <a href="#" > <img src="Picture1.png"> </a>
+                <a href="#" class="brand-logo"> Go More</a>
+                <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+                    <i class="material-icon">Menu</i></a>
+            <ul class="right hide-on-med-and-down">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#search">Search</a></li>
+            <li><a href="#popular">Popular Places</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact/Log</a></li></ul>
+    
+            </div>
+          </div>
+      </nav>
+  </div>
+  <ul class="sidenav" id="mobile-nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#search">Search</a></li>
+        <li><a href="#popular">Popular Places</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact/Log</a></li></ul>
+        
+        <selection class="slider">
+                <img class="mySlides" src="heritage.png" width="100%" height="500px">
+                <img class="mySlides" src="5b86c1ab6bcc7.jpeg" width="100%" height="500px">
+                <img class="mySlides" src="sri-lanka-cover1.jpg" width="100%" height="500px">
+                <img class="mySlides" src="Seema-Malaka-Temple-colombo-sri-lanka.jpg" width="100%" height="500px">
+                <img class="mySlides" src="sri-lanka-tour-operator-slider-1 - Copy.jpg" width="100%" height="500px">
+                <img class="mySlides" src="kandy-esala-perahera-1.jpg" width="100%" height="100%">
+                <img class="mySlides" src="tour-d0924.jpg" width="100%" height="500px">
+                <img class="mySlides" src="sri-lanka-villas-h156.jpg" width="100%" height="500px">
+
+                <script>
+                var slideIndex = 0;
+                        carousel();
+                        
+                        function carousel() {
+                            var i;
+                            var x = document.getElementsByClassName("mySlides");
+                            for (i = 0; i < x.length; i++) {
+                              x[i].style.display = "none"; 
+                            }
+                            slideIndex++;
+                            if (slideIndex > x.length) {slideIndex = 1} 
+                            x[slideIndex-1].style.display = "block"; 
+                            setTimeout(carousel, 2000); 
+                        }
+                </script>
+
+        </selection>
+        <section id="search" class="section section-search teal darken-1 white-text center scrollspy">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12">
+                        <h3>Search Your Choice</h3>
+                        <div class="input-field">
+                                <input type="text" class="white gray-text autocomplete" id="autocomplete-input" placeholder="Wild,Thrill,Scenic....">
+                                <button onclick="search()">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+       <section class="section secction-icon gray lighten-4 center"><div class="container">
+           <div class="row">
+               <div class="col s12 m4">
+                   <div class="card-panel" type="button" onclick="location.href='#popular'">
+                       <i class="material-icons large teal-text">event</i>
+                       <h4>Events</h4>
+                       <p>Enjoy Your Vacation In Sri Lankan Style</p>
+                   </div>
+               </div>
+               <div class="col s12 m4">
+                    <div class="card-panel" type="button" onclick="location.href='shop1.html'">
+                        <i class="material-icons large teal-text">add_shopping_cart</i>
+                        <h4>Go Shopping</h4>
+                        <p>Gather Something To Remember This Moment</p>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                        <div class="card-panel" type="button" onclick="location.href='page12.html'">
+                            <i class="material-icons large teal-text" >directions</i>
+                            <h4>Accommodation </h4>
+                            <p>To Find The Best Place Suited For You</p>
+                        </div>
+                    </div>
+                    
+           </div>
+       </div></section>
+       <section id="popular" class="section section-popular scrollspy">
+           <div class="container">
+               <div class="row">
+                   <div class="col s12 m4">
+                        <div class="card">
+                           <div class="card-image">
+                                <img src="Elephants-in-Sri-Lanka--On-The-Go-Tours-345681493287055_crop_683_341.jpg" alt="" >
+                       
+                               <span class="card-title">
+                                WILD
+                               </span>
+                           </div>
+                           <div class="card-cantent">
+                            <input class="btn"  type="button" class="btn btn-primary" value="MORE DETAILS TO CLICK ON THIS" onclick="location.href='page3.html'">
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col s12 m4">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="soca-rafting-slovenia-bovec.jpg" alt="">
+                                <span class="card-title">
+                                    THRILLS
+                                </span>
+                            </div>
+                            <div class="card-cantent">
+                                <input class="btn"  type="button" class="btn btn-primary" value="MORE DETAILS TO CLICK ON THIS" onclick="location.href='page10.html'">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m4">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="Sri-Lanka-Festival-1-1200x600.jpg" alt="">
+                                    <span class="card-title">
+                                        FESTIVEL
+                                    </span>
+                                </div>
+                                <div class="card-cantent">
+                                    <input class="btn"  type="button" class="btn btn-primary" value="MORE DETAILS TO CLICK ON THIS" onclick="location.href='page7.html'">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m4">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <img src="Nuwara-Eliya-Sri-Lanka.jpg" alt="">
+                                        <span class="card-title">
+                                            SCENIC
+                                        </span>
+                                    </div>
+                                    <div class="card-cantent">
+                                        <input class="btn"  type="button" class="btn btn-primary" value="MORE DETAILS TO CLICK ON THIS" onclick="location.href='page6.html'">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12 m4">
+                                    <div class="card">
+                                        <div class="card-image">
+                                            <img src="tour-package-sri-lanka-Culture-and-Heritage-Tour-Package-of-Sri-Lanka.jpg" alt="">
+                                            <span class="card-title">
+                                                HERITAGE
+                                            </span>
+                                        </div>
+                                        <div class="card-cantent">
+                                            <input class="btn"  type="button" class="btn btn-primary" value="MORE DETAILS TO CLICK ON THIS" onclick="location.href='page5.html'">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s12 m4">
+                                        <div class="card">
+                                            <div class="card-image">
+                                                <img src="sl-beaches.jpg" alt="">
+                                                <span class="card-title">
+                                                    Beaches
+                                                </span>
+                                            </div>
+                                            <div class="card-cantent">
+                                                <input class="btn"  type="button" class="btn btn-primary" value="MORE DETAILS TO CLICK ON THIS" onclick="location.href='page4.html'">
+                                            </div>
+                                        </div>
+                                    </div>
+                    <div class="col s12 m4">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="17-10 SL Food.jpg" alt="">
+                                    <span class="card-title">
+                                        ESSENCE
+                                    </span>
+                                </div>
+                                <div class="card-cantent">
+                                    <input class="btn"  type="button" class="btn btn-primary" value="MORE DETAILS TO CLICK ON THIS" onclick="location.href='page8.html'">
+                                </div>
+                            </div>
+                        </div>
+                        
+               </div>
+           </div>
+       </section>
+       <section id="gallery" class="section section-gallery scrollspy">
+        <div class="container">
+            <h4 class="center">
+                <span class="teal-text">Photo</span>Gallery
+            </h4>
+            <div class="row">
+                <div class="col s12 m3">
+                   <img src="lanka-ramayana-special-6-days.jpg" alt="" class="materialboxed responsive-img">
+                </div>
+                <div class="row">
+                    <div class="col s12 m3">
+                       <img src="ma.jpg" alt="" class="materialboxed responsive-img">
+                    </div>
+                    <div class="row">
+                        <div class="col s12 m3">
+                           <img src="2.jpg" alt="" class="materialboxed responsive-img">
+                        </div>
+                        <div class="row">
+                            <div class="col s12 m3">
+                               <img src="Nuwara-Eliya-Sri-Lanka.jpg" alt="" class="materialboxed responsive-img">
+                            </div>
+                            <div class="row">
+                                <div class="col s12 m3">
+                                   <img src="Amaya-Langdale-Pool.jpg" alt="" class="materialboxed responsive-img">
+                                </div>
+                                <div class="row">
+                                    <div class="col s12 m3">
+                                       <img src="sl-beaches.jpg" alt="" class="materialboxed responsive-img">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s12 m3">
+                                           <img src="3.jpg" alt="" class="materialboxed responsive-img">
+                                        </div>
+                                        <div class="row">
+                                            <div class="col s12 m3">
+                                               <img src="soca-rafting-slovenia-bovec.jpg" alt="" class="materialboxed responsive-img">
+                                            </div>
+                                           
+        </div>
+        
+
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+<section id="contact" class="section-contact scrollspy">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="card-panel teal white-text center">
+                    <i class="material-icons">email</i>
+                    <h5>Contact Us for More Info</h5>
+                    <p>Simply email Us Your Question</p>
+                    <input class="btn"  type="button" class="btn btn-primary" value="Click For More Details"  target="_blank"  onclick="window.location.href='https://ruchiraworld.000webhostapp.com/contact.html'">
+                </div>
+                <ul class="collection with-header">
+                    <li class="collection-header"><h4>Location</h4></li>
+                    <li class="collection-item">Go More Customer Care Center</li>
+                    <li class="collection-item">Kurunegala</li>
+                    <li class="collection-item">Sri Lanka</li>
+                </ul>
+            </div>
+            <form>
+            <div class="col s12 m6"><div class="card-panel grey lighten-3">
+                    <section id="logout" class="section section-logout teal darken-1 white-text center scrollspy">
+                <h5>Log Out</h5>
+              
+                            
+                            <input type="logout" value="Logout" class="btn" onclick="location.href='loginform.html'">
+                                
+                                
+            </div>
+        </div>
+        </form>
+    </div>
+    </div>
+</section>
+
+
+
+       <section class="section section-follow teal darken-2 white-text center" >
+           <div class="container">
+               <div class="row">
+                   <div class="col s12">
+                       <h4>Follow Go More</h4>
+                       <p>Follow Us On Social Media For Special Offers</p>
+                       <a href="#" class="white-text"><i class="fab fa-facebook fa-4x"></i></a>
+                       <a href="#" class="white-text"><i class="fab fa-twitter fa-4x"></i></a>
+                       <a href="#" class="white-text"><i class="fab fa-linkedin fa-4x"></i></a>
+                       <a href="#" class="white-text"><i class="fab fa-google-plus fa-4x"></i></a>
+                       <p> <img src="Picture2.png" alt="Smiley face" style="float:inherit;width:60px;height:60px;"> <br>&copy; 2018 Go More | All Rights Reserved</p>
+                   </div>
+               </div>
+           </div>
+      
+        <script>
+        const sideNav=document.querySelector('.sidenav');
+        M.Sidenav.init(sideNav,{});
+        const slider=document.querySelector('.slider');
+        M.Slider.init(slider,{
+            indicators:false,
+            height:500,
+            transition:500,
+            interval:6000
+        });
+        const ac=document.querySelector('.autocomplete');
+        M.Autocomplete.init(ac,{data:{
+            "Wild":null,
+            "Thrill":null,
+            "Heritage":null,
+            "Beaches":null,
+            "Essence":null,
+            "Scenic":null,
+            "Festive":null,
+        }})
+        const mb=document.querySelectorAll('.materialboxed');
+        M.Materialbox.init(mb,{});
+function search(){
+    var searchVal=document.getElementById("autocomplete-input").value;
+        if(searchVal=="Wild"){
+            window.location.assign("page3.html");
+        }
+        if(searchVal=="Thrill"){
+            window.location.assign("page10.html");
+        }
+        if(searchVal=="Heritage"){
+            window.location.assign("page5.html");
+        }
+        if(searchVal=="Beaches"){
+            window.location.assign("page4.html");
+        }
+        if(searchVal=="Essence"){
+            window.location.assign("page8.html");
+        }
+        if(searchVal=="Scenic"){
+            window.location.assign("page6.html");
+        }
+        if(searchVal=="Festive"){
+            window.location.assign("page7.html");
+        }
+}
+function login(){
+    
+    const swalWithBootstrapButtons = swal.mixin({
+  confirmButtonClass: 'btn btn-success',
+  cancelButtonClass: 'btn btn-danger',
+  buttonsStyling: false,
+})
+
+swalWithBootstrapButtons({
+  title: 'Are you sure?',
+  text: "You won't be able to revert this!",
+  type: 'warning',
+  showCancelButton: true,
+  confirmButtonText: 'Yes, delete it!',
+  cancelButtonText: 'No, cancel!',
+  reverseButtons: true
+}).then((result) => {
+  if (result.value) {
+    swalWithBootstrapButtons(
+      'Deleted!',
+      'Your file has been deleted.',
+      'success'
+    )
+  } else if (
+    // Read more about handling dismissals
+    result.dismiss === swal.DismissReason.cancel
+  ) {
+    swalWithBootstrapButtons(
+      'Cancelled',
+      'Your imaginary file is safe :)',
+      'error'
+    )
+  }
+})
+}
+
+        </script>
+</body>
+</html>
